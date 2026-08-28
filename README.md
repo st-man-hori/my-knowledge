@@ -1,17 +1,22 @@
-# Quartz v5
+# my-knowledge
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+AI時代に自分の知識資産を築くための個人的な知識管理リポジトリ
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+## 目的
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+AIによって自分が持つ実力以上のことができてしまう反面、理解が追いつかないことが増えてきている。
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+そのため、なるべく自分の言葉で理解したことを整理し、知識として蓄積していくことが重要と考えている。
 
-## Sponsors
+## ツール
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+自分で入力したMarkdown形式のノートを見やすく且つ検索しやすい形で管理するために最適な[quartz](https://github.com/jackyzha0/quartz)を使用している。
+
+## 使い方
+
+`/content` ディレクトリにMarkdownファイルを配置することで、quartzが自動的にそれらを読み込み、ウェブ上で閲覧可能な形式に変換する。
+
+ローカルでサーバーを立ち上げるには、以下のコマンドを実行する。
+```bash
+npx quartz build --serve
+```
