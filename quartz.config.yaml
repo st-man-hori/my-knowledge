@@ -220,8 +220,6 @@ plugins:
     layout:
       position: footer
       priority: 50
-  - source: "@quartz-community/recent-notes"
-    enabled: false
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -258,6 +256,8 @@ plugins:
       showTags: true
       hideTagPages: true
       hideFolderPages: true
+      position: left
+      priority: 50
   - source: github:quartz-community/explorer
     enabled: true
     options:
