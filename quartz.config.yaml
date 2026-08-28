@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: st-man-hori's knowledge base
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
