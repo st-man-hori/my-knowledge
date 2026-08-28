@@ -1,15 +1,14 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "my-knowledge-base",
+  "description": "st-man-hori's knowledge base",
   "private": true,
-  "version": "5.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "author": "st-man-hori",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/st-man-hori/my-knowledge.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
