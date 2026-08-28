@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: st-man-hori's knowledge base
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+AIに頼り切らず、自分の言葉で知識を積み上げていくナレッジベース
