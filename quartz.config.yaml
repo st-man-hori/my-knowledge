@@ -261,8 +261,8 @@ plugins:
     options:
       limit: 10
       showTags: true
-      hideTagPages: false
-      hideFolderPages: false
+      hideTagPages: true
+      hideFolderPages: true
 layout:
   groups:
     toolbar:
