@@ -256,6 +256,13 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      limit: 10
+      showTags: true
+      hideTagPages: false
+      hideFolderPages: false
 layout:
   groups:
     toolbar:
