@@ -256,8 +256,9 @@ plugins:
       showTags: true
       hideTagPages: true
       hideFolderPages: true
+    layout:
       position: left
-      priority: 50
+      priority: 60
   - source: github:quartz-community/explorer
     enabled: true
     options:
