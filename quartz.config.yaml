@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: ja-JP
-  baseUrl: st-man-hori.github.io/my-knowledge
+  baseUrl: my-knowledge.st-man.com
   ignorePatterns:
     - private
     - templates
@@ -103,7 +103,7 @@ plugins:
   - source: "@quartz-themes/core"
     enabled: true
     options:
-      theme: things
+      theme: github-theme
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
