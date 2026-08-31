@@ -86,6 +86,7 @@
     "@quartz-community/unlisted-pages": "^0.1.0",
     "@quartz-themes/blue-topaz": "^1.0.1",
     "@quartz-themes/core": "^1.0.0",
+    "@quartz-themes/github-theme": "^1.0.1",
     "@quartz-themes/things": "^1.0.1",
     "@quartz-themes/tokyo-night": "^1.0.1",
     "ansi-truncate": "^1.4.0",
