@@ -68,7 +68,7 @@ plugins:
     enabled: true
     order: 40
   - source: "@quartz-community/table-of-contents"
-    enabled: true
+    enabled: false
     order: 50
     layout:
       position: right
