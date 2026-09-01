@@ -24,24 +24,24 @@ configuration:
       code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#f8fafc"
+        lightgray: "#e2e8f0"
+        gray: "#94a3b8"
+        darkgray: "#334155"
+        dark: "#0f172a"
+        secondary: "#2563eb"
+        tertiary: "#0ea5e9"
+        highlight: rgba(37, 99, 235, 0.08)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#101216"
+        lightgray: "#2a2f3a"
+        gray: "#707a8a"
+        darkgray: "#c9d1d9"
+        dark: "#e6e9ef"
+        secondary: "#7aa2f7"
+        tertiary: "#38bdf8"
+        highlight: rgba(122, 162, 247, 0.1)
         textHighlight: "#b3aa0288"
 plugins:
   - source: "@quartz-community/created-modified-date"

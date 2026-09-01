@@ -1,9 +1,17 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ============================================================
+// Custom theme: modern dev-blog look
+// Everything is driven by the CSS variables from quartz.config.yaml
+// (--light / --lightgray / --gray / --darkgray / --dark / --secondary /
+//  --tertiary / --highlight) so light/dark both work without
+// :root[saved-theme] scoping. Tints are derived with color-mix.
+// ============================================================
 
+// ----- typography -----
 article {
   font-size: 1.05rem;
+  letter-spacing: 0.02em;
 
   p,
   li {
@@ -11,6 +19,136 @@ article {
     // fixed 1.6rem, which gets too cramped once the article font is enlarged.
     line-height: 1.85;
   }
+
+  h2 {
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+}
+
+// ----- page header -----
+h1.article-title {
+  font-size: 2.1rem;
+  font-weight: $boldWeight;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 4px;
+    margin-top: 0.7rem;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  }
+}
+
+p.content-meta {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.breadcrumb-container {
+  font-size: 0.85rem;
+}
+
+h2.page-title {
+  font-weight: $boldWeight;
+}
+
+// ----- inline elements -----
+article {
+  code {
+    background: color-mix(in srgb, var(--secondary) 7%, var(--lightgray) 45%);
+    padding: 0.12rem 0.35rem;
+  }
+
+  a.tag-link {
+    background: color-mix(in srgb, var(--tertiary) 14%, transparent);
+    padding: 0.05rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.85em;
+
+    &:hover {
+      background: color-mix(in srgb, var(--tertiary) 26%, transparent);
+    }
+  }
+}
+
+blockquote {
+  background: color-mix(in srgb, var(--secondary) 6%, transparent);
+  padding: 0.6rem 1rem;
+  border-radius: 0 8px 8px 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--lightgray) 20%, var(--lightgray) 80%, transparent);
+}
+
+// ----- code blocks -----
+pre {
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--lightgray) 35%, var(--light));
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.05);
+}
+
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+  margin-bottom: 0;
+  background: color-mix(in srgb, var(--lightgray) 55%, var(--light));
+
+  & + pre {
+    border-top-left-radius: 0;
+  }
+}
+
+// ----- tables -----
+.table-container > table {
+  thead tr {
+    background: color-mix(in srgb, var(--lightgray) 50%, var(--light));
+  }
+
+  th,
+  td {
+    padding: 0.45rem 0.85rem;
+  }
+}
+
+// ----- sidebar widgets as cards -----
+.graph,
+.backlinks,
+.recent-notes {
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  padding: 0.9rem 1rem 1rem;
+  background: color-mix(in srgb, var(--lightgray) 14%, var(--light));
+
+  & > h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--darkgray);
+    margin: 0 0 0.7rem;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      width: 0.45rem;
+      height: 0.45rem;
+      border-radius: 2px;
+      background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+    }
+  }
+}
+
+.graph > .graph-outer {
+  border-radius: 8px;
 }
 
 // Cap the recent-notes list at a fixed height and let it scroll on its
@@ -27,3 +165,35 @@ article {
   }
 }
 
+// ----- note properties (frontmatter box) -----
+details.note-properties {
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--lightgray) 14%, var(--light));
+
+  & > summary {
+    cursor: pointer;
+  }
+}
+
+// ----- toolbar / explorer -----
+.search > .search-button {
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--lightgray) 30%, var(--light));
+
+  &:hover {
+    border-color: var(--gray);
+  }
+}
+
+.explorer {
+  a.nav-file-title {
+    border-radius: 6px;
+
+    &:hover {
+      color: var(--secondary);
+      background: var(--highlight);
+    }
+  }
+}
