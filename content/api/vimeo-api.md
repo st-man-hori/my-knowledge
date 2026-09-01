@@ -1,6 +1,6 @@
 ---
 title: Vimeo API
-description: Vimeo APIについて解説します。
+description: Vimeo APIの概要と2種類のOAuth2認証方法、PHP SDKを使った動画アップロード・編集の実装例をまとめました。
 date: 2026-09-01
 tags: api, vimeo
 ---
