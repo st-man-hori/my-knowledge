@@ -71,7 +71,12 @@ article {
 // (tag-list), listing pages, note properties.
 a.tag-link {
   background: color-mix(in srgb, var(--tertiary) 14%, transparent);
-  padding: 0.05rem 0.6rem;
+  display: inline-block;
+  line-height: 1.35;
+  // M PLUS 1p's ascent/descent is very top-heavy (1160/288), which drops the
+  // glyphs below the visual middle of the pill — the extra bottom padding
+  // recenters them. Tune the third value if the font ever changes.
+  padding: 0.05em 0.75em 0.21em;
   border-radius: 999px;
   font-size: 0.85em;
 
