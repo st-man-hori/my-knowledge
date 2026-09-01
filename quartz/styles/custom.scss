@@ -223,8 +223,11 @@ details.note-properties {
 // ----- mobile (SP) adjustments -----
 @media all and ($mobile) {
   // 1.75rem site title dwarfs the icon toolbar it sits next to on mobile.
+  // The hamburger (.explorer, order: -1) sits flush against it because the
+  // mobile header row has gap: 0 — push the title off it a bit.
   h2.page-title {
     font-size: 1.2rem;
+    margin-left: 0.75rem;
   }
 
   .explorer {
