@@ -20,6 +20,12 @@ article {
     line-height: 1.85;
   }
 
+  p {
+    // Japanese body text reads as "left-shifted" with a ragged right edge;
+    // justified setting (standard for Japanese print) keeps both edges flush.
+    text-align: justify;
+  }
+
   h2 {
     padding-bottom: 0.4rem;
     border-bottom: 1px solid var(--lightgray);
