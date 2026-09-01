@@ -71,7 +71,7 @@ plugins:
     enabled: true
     order: 50
     layout:
-      position: beforeBody
+      position: right
       priority: 30
   - source: "@quartz-community/crawl-links"
     enabled: true
@@ -267,13 +267,13 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      limit: 10
+      limit: 3
       showTags: false
       hideTagPages: true
       hideFolderPages: true
     layout:
       position: right
-      priority: 60
+      priority: 40
   - source: github:quartz-community/explorer
     enabled: true
     options:
