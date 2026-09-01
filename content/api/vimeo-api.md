@@ -1,6 +1,7 @@
 ---
 title: Vimeo API
 date: 2026-09-01
+tags: api, vimeo
 ---
 
 Vimeo APIは、Vimeoの動画やユーザー情報などにアクセスするためのRESTful APIです。

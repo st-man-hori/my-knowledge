@@ -1,6 +1,7 @@
 ---
 title: JWT (JSON Web Token)
-date: 2026-08-31
+date: 
+tags: security, jwt
 ---
 
 JWT (JSON Web Token)は、認証・認可の情報をシステム間で安全にやり取りするための標準的な手法となります。

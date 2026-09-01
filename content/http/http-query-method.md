@@ -1,6 +1,7 @@
 ---
 title: HTTPの新メソッド「QUERY」
 date: 2026-09-01
+tags: http
 ---
 
 2026年6月に追加された新しいHTTPメソッドです。
