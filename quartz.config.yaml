@@ -157,6 +157,14 @@ plugins:
     enabled: true
   - source: "./plugins/robots-txt"
     enabled: true
+  - source: "./plugins/github-link"
+    enabled: true
+    options:
+      link: https://github.com/st-man-hori/my-knowledge
+    layout:
+      position: left
+      priority: 32
+      group: toolbar
   - source: "@quartz-community/canvas-page"
     enabled: true
   - source: "@quartz-community/content-page"

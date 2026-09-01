@@ -1,0 +1,34 @@
+{
+  "name": "github-link",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components.ts",
+    "./package.json": "./package.json"
+  },
+  "quartz": {
+    "name": "github-link",
+    "displayName": "GitHub Link",
+    "category": "component",
+    "version": "1.0.0",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "link": "https://github.com"
+    },
+    "components": {
+      "GithubLink": {
+        "displayName": "GitHub Link",
+        "defaultPosition": "left",
+        "defaultPriority": 32
+      }
+    },
+    "optionSchema": {
+      "link": {
+        "type": "string"
+      }
+    }
+  }
+}
