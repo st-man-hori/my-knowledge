@@ -1,5 +1,6 @@
 ---
 title: HTTPの新メソッド「QUERY」
+description: HTTPの新メソッド「QUERY」について解説します。
 date: 2026-09-01
 tags: http
 ---

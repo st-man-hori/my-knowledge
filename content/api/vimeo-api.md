@@ -1,5 +1,6 @@
 ---
 title: Vimeo API
+description: Vimeo APIについて解説します。
 date: 2026-09-01
 tags: api, vimeo
 ---

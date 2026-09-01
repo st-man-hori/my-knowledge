@@ -1,5 +1,6 @@
 ---
 title: DNSレコードタイプ
+description: DNSレコードタイプについて解説します。
 date: 2026-08-31
 tags: network, dns
 ---

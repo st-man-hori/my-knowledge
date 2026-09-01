@@ -1,6 +1,7 @@
 ---
 title: JWT (JSON Web Token)
-date: 
+description: JWT (JSON Web Token)について解説します。
+date: 2026-08-31
 tags: security, jwt
 ---
 
