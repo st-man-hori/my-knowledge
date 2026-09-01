@@ -226,12 +226,6 @@ a {
       display: flex;
       height: 100vh;
       position: sticky;
-      overflow-y: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
     }
 
     & .sidebar.left {

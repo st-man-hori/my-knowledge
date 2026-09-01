@@ -5,3 +5,17 @@
 article {
   font-size: 1.2rem;
 }
+
+// Cap the recent-notes list at a fixed height and let it scroll on its
+// own, independent of the other sidebar widgets (no shared flex-shrink).
+.recent-notes {
+  & > ul.recent-ul {
+    max-height: 14rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
