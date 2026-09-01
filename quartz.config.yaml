@@ -71,7 +71,7 @@ plugins:
     enabled: true
     order: 50
     layout:
-      position: right
+      position: beforeBody
       priority: 30
   - source: "@quartz-community/crawl-links"
     enabled: true
@@ -272,7 +272,7 @@ plugins:
       hideTagPages: true
       hideFolderPages: true
     layout:
-      position: left
+      position: right
       priority: 60
   - source: github:quartz-community/explorer
     enabled: true
