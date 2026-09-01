@@ -80,6 +80,9 @@ plugins:
     enabled: true
     options:
       markdownLinkResolution: shortest
+      # External links get target="_blank" automatically, so plain markdown
+      # links can be used instead of raw <a> tags.
+      openLinksInNewTab: true
     order: 60
   - source: "@quartz-community/description"
     enabled: true

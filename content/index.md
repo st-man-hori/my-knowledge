@@ -11,4 +11,4 @@ AIに聞けばだいたいのことはすぐ答えが返ってくる時代です
 
 そのため本文は極力自分の言葉で書くようにしていますが、作図や理解度テストの生成など、AIも補助的に活用しています。
 
-<p><a href="https://github.com/st-man-hori/my-knowledge" target="_blank">https://github.com/st-man-hori/my-knowledge</a></p>
+[st-man-hori/my-knowledge](https://github.com/st-man-hori/my-knowledge)
