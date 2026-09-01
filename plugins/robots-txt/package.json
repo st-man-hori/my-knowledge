@@ -1,0 +1,14 @@
+{
+  "name": "robots-txt",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "quartz": {
+    "name": "robots-txt",
+    "displayName": "Robots.txt",
+    "category": "emitter",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {}
+  }
+}
