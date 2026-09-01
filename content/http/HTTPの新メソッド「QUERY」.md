@@ -1,6 +1,6 @@
-# HTTP QUERY METHOD
+# HTTPの新メソッド「QUERY」
 
-`HTTP QUERY METHOD`は、2026年6月に追加された新しいHTTPメソッドです。
+2026年6月に追加された新しいHTTPメソッドです。
 
 https://datatracker.ietf.org/doc/html/rfc10008
 
