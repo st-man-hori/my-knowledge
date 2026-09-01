@@ -3,7 +3,14 @@
 // put your custom CSS here!
 
 article {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+
+  p,
+  li {
+    // Unitless ratio so it scales with font-size; base.scss pins p/li to a
+    // fixed 1.6rem, which gets too cramped once the article font is enlarged.
+    line-height: 1.85;
+  }
 }
 
 // Cap the recent-notes list at a fixed height and let it scroll on its
