@@ -100,8 +100,23 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
-  - source: "@quartz-themes/core"
+  - source: github:quartz-community/fonts
     enabled: true
+    options:
+      fontOrigin: googleFonts
+      header: M PLUS 1p
+      title: M PLUS 1p
+      body: M PLUS 1p
+      interface: M PLUS 1p
+      h1: M PLUS 1p
+      h2: M PLUS 1p
+      h3: M PLUS 1p
+      h4: M PLUS 1p
+      h5: M PLUS 1p
+      h6: M PLUS 1p
+      code: JetBrains Mono
+  - source: "@quartz-themes/core"
+    enabled: false
     options:
       theme: things
       # mode: both
@@ -262,7 +277,7 @@ plugins:
   - source: github:quartz-community/explorer
     enabled: true
     options:
-      folderDefaultState: collapsed
+      folderDefaultState: open
       folderClickBehavior: link
       useSavedState: true
     order: 50
