@@ -13,11 +13,14 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    # Font loading is owned by the `fonts` plugin below (M PLUS 1p); keeping this
+    # on "googleFonts" made Head.tsx fetch a second, unused Noto Sans JP stylesheet
+    # on every page.
+    fontOrigin: local
     cdnCaching: true
     typography:
-      header: Noto Sans JP
-      body: Noto Sans JP
+      header: M PLUS 1p
+      body: M PLUS 1p
       code: JetBrains Mono
     colors:
       lightMode:
@@ -98,8 +101,6 @@ plugins:
   - source: "@quartz-community/roam"
     enabled: false
     order: 92
-  - source: "@quartz-community/quartz-fonts"
-    enabled: true
   - source: github:quartz-community/fonts
     enabled: true
     options:
