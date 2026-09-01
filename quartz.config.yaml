@@ -104,7 +104,7 @@ plugins:
     enabled: true
     options:
       theme: things
-      mode: both
+      # mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/explicit-publish"
@@ -253,7 +253,7 @@ plugins:
     enabled: true
     options:
       limit: 10
-      showTags: true
+      showTags: false
       hideTagPages: true
       hideFolderPages: true
     layout:
