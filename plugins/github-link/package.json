@@ -16,7 +16,8 @@
     "defaultOrder": 50,
     "defaultEnabled": true,
     "defaultOptions": {
-      "link": "https://github.com"
+      "link": "https://github.com",
+      "label": "GitHub"
     },
     "components": {
       "GithubLink": {
@@ -27,6 +28,9 @@
     },
     "optionSchema": {
       "link": {
+        "type": "string"
+      },
+      "label": {
         "type": "string"
       }
     }

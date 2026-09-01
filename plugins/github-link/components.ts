@@ -1,11 +1,15 @@
 import { h } from "preact"
 
 interface Options {
+  /** URL the icon links to */
   link: string
+  /** Accessible label / tooltip */
+  label: string
 }
 
 const defaultOptions: Options = {
   link: "https://github.com",
+  label: "GitHub",
 }
 
 // GitHub mark from GitHub's Octicons (mark-github-16, MIT licensed)
@@ -25,29 +29,39 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
         href: opts.link,
         target: "_blank",
         rel: "noopener noreferrer",
-        "aria-label": "GitHub",
-        title: "GitHub",
+        "aria-label": opts.label,
+        title: opts.label,
       },
       h(
         "svg",
         {
           xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 16 16",
+          viewBox: "0 0 24 24",
           width: "20",
           height: "20",
           "aria-hidden": "true",
         },
-        h("path", { d: GITHUB_MARK_PATH }),
+        // The optical correction lives inside the SVG (the same trick
+        // Quartz's reader-mode icon uses): the 16-unit octicon is scaled and
+        // shifted so that, in the shared 20px icon slot, it matches the
+        // visual size and baseline of the neighboring lucide toolbar icons.
+        // No CSS positioning or per-site options needed.
+        h(
+          "g",
+          { transform: "translate(0, -3.6) scale(1.575)" },
+          h("path", { d: GITHUB_MARK_PATH }),
+        ),
       ),
     )
   }
 
-  // Same box model as the darkmode/readermode buttons (20x32 box, svg
-  // absolutely centered) so the icons line up on the toolbar row.
+  // Identical box model to Quartz's darkmode/readermode toolbar buttons
+  // (20x32 slot, 20px icon vertically centered).
   Component.css = `
 a.github-link {
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 32px;
   margin: 0;
@@ -56,14 +70,10 @@ a.github-link {
   background: none;
 }
 a.github-link svg {
-  position: absolute;
-  /* Optically matched to the neighboring moon/book icons by eye: 21px glyph,
-     raised ~2.5px above the geometric center of the 32px box (the neighbors'
-     glyphs sit slightly high in their boxes). */
-  width: 21px;
-  height: 21px;
-  top: calc(50% - 13px);
-  left: 0;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  overflow: visible;
   fill: var(--darkgray);
   transition: fill 0.2s ease;
 }
