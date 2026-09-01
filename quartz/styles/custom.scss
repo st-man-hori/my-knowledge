@@ -65,17 +65,25 @@ article {
     background: color-mix(in srgb, var(--secondary) 7%, var(--lightgray) 45%);
     padding: 0.12rem 0.35rem;
   }
+}
 
-  a.tag-link {
-    background: color-mix(in srgb, var(--tertiary) 14%, transparent);
-    padding: 0.05rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.85em;
+// Pill-shaped tags everywhere they appear: article body, page header
+// (tag-list), listing pages, note properties.
+a.tag-link {
+  background: color-mix(in srgb, var(--tertiary) 14%, transparent);
+  padding: 0.05rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85em;
 
-    &:hover {
-      background: color-mix(in srgb, var(--tertiary) 26%, transparent);
-    }
+  &:hover {
+    background: color-mix(in srgb, var(--tertiary) 26%, transparent);
   }
+}
+
+// Tag row under the article title: tighten the plugin's 1rem margins so
+// title / tags / date read as one header block.
+.page-header ul.tags {
+  margin: 0.7rem 0 0;
 }
 
 blockquote {

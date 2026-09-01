@@ -194,10 +194,12 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
-      priority: 30
+      # Right below the article title (10), above note-properties (15)
+      # and content-meta (20).
+      priority: 12
   - source: "@quartz-community/page-title"
     enabled: true
     layout:
