@@ -181,6 +181,19 @@ figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
   }
 }
 
+// ----- folder / tag listing pages -----
+// The component CSS only resets ul.tags inside search result cards, so the
+// listing's tag list still shows default bullets.
+.page-listing ul.tags {
+  list-style: none;
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
 // ----- note properties (frontmatter box) -----
 details.note-properties {
   border: 1px solid var(--lightgray);
