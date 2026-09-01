@@ -1,5 +1,6 @@
 ---
 title: st-man-hori's knowledge base
+date: 2026-08-30
 ---
 
 AIに頼り切らず、自分の言葉で知識を積み上げていく場所です。
