@@ -131,7 +131,7 @@ figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 0.05em;
     color: var(--darkgray);
     margin: 0 0 0.7rem;
@@ -157,10 +157,24 @@ figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
   & > ul.recent-ul {
     max-height: 14rem;
     overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
+    padding-right: 0.4rem;
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--gray) 45%, transparent) transparent;
+
+    & > li {
+      margin: 0.75rem 0;
+
+      // Item titles render as h3 (1.12rem from base.scss) — too dominant
+      // for a sidebar list; scale them down to list size.
+      .desc h3 {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .meta {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -188,7 +202,15 @@ details.note-properties {
 }
 
 .explorer {
+  // Folder names (0.95rem) rendered smaller than file titles (inherited
+  // 1rem), inverting the hierarchy — folders up, files down.
+  .folder-container div > a,
+  .folder-container div > button span {
+    font-size: 1rem;
+  }
+
   a.nav-file-title {
+    font-size: 0.9rem;
     border-radius: 6px;
 
     &:hover {
