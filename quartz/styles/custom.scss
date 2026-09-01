@@ -219,3 +219,33 @@ details.note-properties {
     }
   }
 }
+
+// ----- mobile (SP) adjustments -----
+@media all and ($mobile) {
+  // 1.75rem site title dwarfs the icon toolbar it sits next to on mobile.
+  h2.page-title {
+    font-size: 1.2rem;
+  }
+
+  .explorer {
+    // The drawer opens as a full-screen overlay with zero horizontal
+    // padding and only 4rem clearance under the sticky header row —
+    // give the list breathing room on all sides.
+    & .explorer-content {
+      padding: 5rem 1.5rem 2rem;
+    }
+
+    // Desktop sizes (0.9–1rem) are too small for a full-screen touch
+    // list; scale up and open up the tap targets.
+    .folder-container div > a,
+    .folder-container div > button span {
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    a.nav-file-title {
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+  }
+}
