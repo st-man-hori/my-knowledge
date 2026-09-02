@@ -1,5 +1,5 @@
 ---
-title: st-man-hori's knowledge base
+title: st-man-hori's Notes
 date: 2026-08-30
 ---
 
