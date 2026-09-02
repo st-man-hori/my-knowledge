@@ -23,12 +23,11 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
   const Component = (props: any) => {
     const displayClass = props?.displayClass ?? ""
     return h(
-      "a",
+      "button",
       {
+        type: "button",
         class: `github-link ${displayClass}`.trim(),
-        href: opts.link,
-        target: "_blank",
-        rel: "noopener noreferrer",
+        "data-link": opts.link,
         "aria-label": opts.label,
         title: opts.label,
       },
@@ -37,10 +36,6 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
         {
           xmlns: "http://www.w3.org/2000/svg",
           // Octicon's native 16x16 viewBox, used as-is (no scale transform).
-          // A `transform="scale(...)"` attribute's origin is resolved
-          // differently by WebKit than by Chromium/Firefox, which was
-          // shifting the icon specifically on iOS Safari/Chrome (both
-          // WebKit-based) even though desktop rendering looked correct.
           viewBox: "0 0 16 16",
           width: "20",
           height: "20",
@@ -51,35 +46,29 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
     )
   }
 
-  // Same technique as Quartz's darkmode/readermode toolbar buttons: an
-  // absolutely-positioned icon inside a `position: relative` 20x32 slot,
-  // centered via `top: calc(50% - 10px)`. Not flexbox + align-items —
-  // that centers a replaced element (the <svg>) using each engine's own
-  // intrinsic-size/baseline logic, which iOS Safari computes a couple of
-  // pixels differently from desktop browsers, and was the actual cause of
-  // the icon floating on iPhone no matter how the SVG itself was nudged.
-  // Plain top/left math has no such ambiguity.
+  // A <button>, not an <a>: darkmode/reader-mode are both <button>s, and
+  // an <a> styled to imitate a <button>'s box model still isn't a
+  // <button> — it can inherit different font/line-height metrics from
+  // its surroundings, and the gap that creates under an inline-level box
+  // computed differently enough on iOS Safari/Chrome to throw the icon
+  // off vertically, even once matched pixel-for-pixel on desktop. Making
+  // this an actual <button>, styled identically to darkmode/reader-mode's
+  // own CSS below, removes that whole class of tag-dependent discrepancy
+  // — it's now the same element type as its siblings, not a lookalike.
   Component.css = `
-a.github-link {
-  /* inline-block, not block: darkmode/reader-mode are <button>s, which
-     are inline-level by default and so leave a small baseline-alignment
-     gap below them inside their flex-wrapper <div> (the classic gap
-     under inline/inline-block content). That gap inflates the wrapper's
-     height, and the toolbar centers each icon by that wrapper height —
-     so this element needs the same inline-level gap, or its wrapper ends
-     up a few px shorter and the icon centers a few px lower than its
-     siblings. Verified pixel-for-pixel equal in a headless-browser
-     measurement of the actual toolbar markup. */
-  display: inline-block;
+button.github-link {
+  cursor: pointer;
+  padding: 0;
   position: relative;
+  background: none;
+  border: none;
   width: 20px;
   height: 32px;
   margin: 0;
-  padding: 0;
+  text-align: inherit;
   flex-shrink: 0;
-  background: none;
 }
-a.github-link svg {
+button.github-link svg {
   position: absolute;
   top: calc(50% - 10px);
   left: calc(50% - 10px);
@@ -88,9 +77,32 @@ a.github-link svg {
   fill: var(--darkgray);
   transition: fill 0.2s ease;
 }
-a.github-link:hover svg {
+button.github-link:hover svg {
   fill: var(--secondary);
 }
+`
+
+  // Same wiring pattern as darkmode/reader-mode's own inline scripts:
+  // attach a click handler on every "nav"/"render" (Quartz's SPA
+  // navigation events), and register its removal via window.addCleanup
+  // so it doesn't pile up duplicate listeners across page swaps.
+  Component.beforeDOMLoaded = `
+(() => {
+  const openGithubLink = (e) => {
+    const link = e.currentTarget.getAttribute("data-link")
+    if (link) {
+      window.open(link, "_blank", "noopener,noreferrer")
+    }
+  }
+  const setupGithubLink = () => {
+    for (const el of document.getElementsByClassName("github-link")) {
+      el.addEventListener("click", openGithubLink)
+      window.addCleanup(() => el.removeEventListener("click", openGithubLink))
+    }
+  }
+  document.addEventListener("nav", setupGithubLink)
+  document.addEventListener("render", setupGithubLink)
+})()
 `
 
   return Component
