@@ -74,9 +74,15 @@ a.github-link svg {
   flex-shrink: 0;
   fill: var(--darkgray);
   transition: fill 0.2s ease;
-  /* Paint-only optical nudge (see comment in components.ts) — never
-     affects box size/flex layout, so it can't drift between browsers. */
-  transform: translateY(-2.5px);
+  /* Optical nudge to match the neighboring toolbar icons' baseline.
+     Deliberately a negative margin, not a CSS transform: WebKit has known
+     inconsistencies centering a flex item that has a transform applied
+     directly to it (confirmed on iOS Safari — Chromium/Android were
+     fine). A negative margin is plain box-model math, so every engine
+     agrees on the result. With align-items: center on the parent, the
+     re-centering absorbs half of it, so -5px of margin nets a -2.5px
+     visual shift. */
+  margin-top: -5px;
 }
 a.github-link:hover svg {
   fill: var(--secondary);
