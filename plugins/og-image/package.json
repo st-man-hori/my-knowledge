@@ -1,0 +1,25 @@
+{
+  "name": "og-image",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "dependencies": {
+    "@quartz-community/og-image": "*",
+    "reading-time": "^1.5.0"
+  },
+  "quartz": {
+    "name": "og-image",
+    "displayName": "OG Image",
+    "category": "emitter",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "colorScheme": "lightMode",
+      "width": 1200,
+      "height": 630,
+      "excludeRoot": false,
+      "defaultTitle": "Untitled",
+      "defaultDescription": "No description provided"
+    }
+  }
+}

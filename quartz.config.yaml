@@ -154,7 +154,7 @@ plugins:
       enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: false
-  - source: "@quartz-community/og-image"
+  - source: "./plugins/og-image"
     enabled: true
   - source: "@quartz-community/cname"
     enabled: true
