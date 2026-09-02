@@ -41,16 +41,15 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
           height: "20",
           "aria-hidden": "true",
         },
-        // The optical correction lives inside the SVG (the same trick
-        // Quartz's reader-mode icon uses): the 16-unit octicon is scaled and
-        // shifted so that, in the shared 20px icon slot, it matches the
-        // visual size and baseline of the neighboring lucide toolbar icons.
-        // No CSS positioning or per-site options needed.
-        h(
-          "g",
-          { transform: "translate(0, -3.6) scale(1.575)" },
-          h("path", { d: GITHUB_MARK_PATH }),
-        ),
+        // The 16-unit octicon is scaled to exactly fill the 24-unit
+        // viewBox (no overflow), then the whole rendered SVG is nudged up
+        // via a CSS transform on the element below to match the visual
+        // baseline of the neighboring lucide toolbar icons. Doing the
+        // optical correction as a paint-only CSS transform (rather than an
+        // in-SVG transform + `overflow: visible`) keeps it independent of
+        // how a given browser computes flex sizing for overflowing SVG
+        // content, which was the likely cause of it floating on mobile.
+        h("g", { transform: "scale(1.5)" }, h("path", { d: GITHUB_MARK_PATH })),
       ),
     )
   }
@@ -73,9 +72,11 @@ a.github-link svg {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  overflow: visible;
   fill: var(--darkgray);
   transition: fill 0.2s ease;
+  /* Paint-only optical nudge (see comment in components.ts) — never
+     affects box size/flex layout, so it can't drift between browsers. */
+  transform: translateY(-2.5px);
 }
 a.github-link:hover svg {
   fill: var(--secondary);
