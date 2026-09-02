@@ -58,6 +58,16 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
   // Plain top/left math has no such ambiguity.
   Component.css = `
 a.github-link {
+  /* inline-block, not block: darkmode/reader-mode are <button>s, which
+     are inline-level by default and so leave a small baseline-alignment
+     gap below them inside their flex-wrapper <div> (the classic gap
+     under inline/inline-block content). That gap inflates the wrapper's
+     height, and the toolbar centers each icon by that wrapper height —
+     so this element needs the same inline-level gap, or its wrapper ends
+     up a few px shorter and the icon centers a few px lower than its
+     siblings. Verified pixel-for-pixel equal in a headless-browser
+     measurement of the actual toolbar markup. */
+  display: inline-block;
   position: relative;
   width: 20px;
   height: 32px;
