@@ -26,7 +26,9 @@ export default (() => {
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
-    const iconPath = joinSegments(baseDir, "static/icon.png")
+    const favicon32Path = joinSegments(baseDir, "static/favicon-32.png")
+    const favicon16Path = joinSegments(baseDir, "static/favicon-16.png")
+    const appleTouchIconPath = joinSegments(baseDir, "static/apple-touch-icon-180.png")
 
     // Url of current page. Index slugs (e.g. "index", "api/index") are simplified
     // to their served directory path (e.g. "/", "api/") so canonical/og:url tags
@@ -135,7 +137,9 @@ export default (() => {
           </>
         )}
 
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" href={favicon32Path} sizes="32x32" type="image/png" />
+        <link rel="icon" href={favicon16Path} sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href={appleTouchIconPath} sizes="180x180" />
         <link rel="canonical" href={socialUrl} />
         {isNoIndex && <meta name="robots" content="noindex, nofollow" />}
         <meta name="description" content={description} />
