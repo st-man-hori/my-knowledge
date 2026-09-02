@@ -161,7 +161,7 @@ plugins:
   - source: "./plugins/robots-txt"
     enabled: true
   - source: "./plugins/github-link"
-    enabled: false
+    enabled: true
     options:
       link: https://github.com/st-man-hori/my-knowledge
     layout:
