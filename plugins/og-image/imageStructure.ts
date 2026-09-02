@@ -22,7 +22,6 @@ export function customOgImageStructure({
   cfg,
   userOpts,
   title,
-  description,
   fileData,
   iconBase64,
 }: ImageOptions & { userOpts: UserOpts; iconBase64?: string }) {
@@ -128,65 +127,47 @@ export function customOgImageStructure({
 
           h(
             "div",
-            { style: { display: "flex", marginTop: "1.1rem", marginBottom: "0.6rem" } },
-            h(
-              "h1",
-              {
-                style: {
-                  margin: 0,
-                  fontSize: useSmallerFont ? 62 : 70,
-                  fontFamily: headerFont,
-                  fontWeight: 800,
-                  color: colors.dark,
-                  lineHeight: 1.2,
-                  letterSpacing: -1,
-                  display: "-webkit-box",
-                  WebkitBoxOrient: "vertical",
-                  WebkitLineClamp: 2,
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                },
-              },
-              title,
-            ),
-          ),
-
-          h("div", {
-            style: {
-              display: "flex",
-              width: 64,
-              height: 7,
-              borderRadius: 7,
-              background: accentGradient,
-              marginBottom: "1.6rem",
-            },
-          }),
-
-          h(
-            "div",
             {
               style: {
                 display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
                 flex: 1,
-                fontSize: 34,
-                color: colors.darkgray,
-                lineHeight: 1.5,
               },
             },
-            h(
-              "p",
-              {
-                style: {
-                  margin: 0,
-                  display: "-webkit-box",
-                  WebkitBoxOrient: "vertical",
-                  WebkitLineClamp: 4,
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
+            [
+              h(
+                "h1",
+                {
+                  style: {
+                    margin: 0,
+                    fontSize: useSmallerFont ? 76 : 92,
+                    fontFamily: headerFont,
+                    fontWeight: 800,
+                    color: colors.dark,
+                    lineHeight: 1.25,
+                    letterSpacing: -1.5,
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 3,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  },
                 },
-              },
-              description,
-            ),
+                title,
+              ),
+
+              h("div", {
+                style: {
+                  display: "flex",
+                  width: 84,
+                  height: 9,
+                  borderRadius: 9,
+                  background: accentGradient,
+                  marginTop: "1.75rem",
+                },
+              }),
+            ],
           ),
 
           h(
