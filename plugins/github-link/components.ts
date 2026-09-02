@@ -42,25 +42,23 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
           "aria-hidden": "true",
         },
         // The 16-unit octicon is scaled to exactly fill the 24-unit
-        // viewBox (no overflow), then the whole rendered SVG is nudged up
-        // via a CSS transform on the element below to match the visual
-        // baseline of the neighboring lucide toolbar icons. Doing the
-        // optical correction as a paint-only CSS transform (rather than an
-        // in-SVG transform + `overflow: visible`) keeps it independent of
-        // how a given browser computes flex sizing for overflowing SVG
-        // content, which was the likely cause of it floating on mobile.
+        // viewBox (no overflow).
         h("g", { transform: "scale(1.5)" }, h("path", { d: GITHUB_MARK_PATH })),
       ),
     )
   }
 
-  // Identical box model to Quartz's darkmode/readermode toolbar buttons
-  // (20x32 slot, 20px icon vertically centered).
+  // Same technique as Quartz's darkmode/readermode toolbar buttons: an
+  // absolutely-positioned icon inside a `position: relative` 20x32 slot,
+  // centered via `top: calc(50% - 10px)`. Not flexbox + align-items —
+  // that centers a replaced element (the <svg>) using each engine's own
+  // intrinsic-size/baseline logic, which iOS Safari computes a couple of
+  // pixels differently from desktop browsers, and was the actual cause of
+  // the icon floating on iPhone no matter how the SVG itself was nudged.
+  // Plain top/left math has no such ambiguity.
   Component.css = `
 a.github-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 20px;
   height: 32px;
   margin: 0;
@@ -69,20 +67,13 @@ a.github-link {
   background: none;
 }
 a.github-link svg {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
   width: 20px;
   height: 20px;
-  flex-shrink: 0;
   fill: var(--darkgray);
   transition: fill 0.2s ease;
-  /* Optical nudge to match the neighboring toolbar icons' baseline.
-     Deliberately a negative margin, not a CSS transform: WebKit has known
-     inconsistencies centering a flex item that has a transform applied
-     directly to it (confirmed on iOS Safari — Chromium/Android were
-     fine). A negative margin is plain box-model math, so every engine
-     agrees on the result. With align-items: center on the parent, the
-     re-centering absorbs half of it, so -5px of margin nets a -2.5px
-     visual shift. */
-  margin-top: -5px;
 }
 a.github-link:hover svg {
   fill: var(--secondary);
