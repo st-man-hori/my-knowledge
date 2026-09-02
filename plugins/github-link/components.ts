@@ -36,14 +36,17 @@ export const GithubLink = (userOpts?: Partial<Options>) => {
         "svg",
         {
           xmlns: "http://www.w3.org/2000/svg",
-          viewBox: "0 0 24 24",
+          // Octicon's native 16x16 viewBox, used as-is (no scale transform).
+          // A `transform="scale(...)"` attribute's origin is resolved
+          // differently by WebKit than by Chromium/Firefox, which was
+          // shifting the icon specifically on iOS Safari/Chrome (both
+          // WebKit-based) even though desktop rendering looked correct.
+          viewBox: "0 0 16 16",
           width: "20",
           height: "20",
           "aria-hidden": "true",
         },
-        // The 16-unit octicon is scaled to exactly fill the 24-unit
-        // viewBox (no overflow).
-        h("g", { transform: "scale(1.5)" }, h("path", { d: GITHUB_MARK_PATH })),
+        h("path", { d: GITHUB_MARK_PATH }),
       ),
     )
   }
