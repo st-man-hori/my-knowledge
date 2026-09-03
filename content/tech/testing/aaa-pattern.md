@@ -1,7 +1,7 @@
 ---
 title: テストの構造パターン「AAA」について
 description: テストの構造パターン「AAA」について解説します。AAAはArrange、Act、Assertの略で、テストコードの基本的な構造を示します。
-date: 2026-09-03
+created: 2026-09-03
 tags: test, test-pattern, aaa
 ---
 

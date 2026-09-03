@@ -1,7 +1,7 @@
 ---
 title: DNSレコードタイプ
 description: A・AAAA・CNAME・MX・TXT・NS・PTRなど代表的なDNSレコードタイプの役割と仕組みをシーケンス図付きで解説します。
-date: 2026-08-31
+created: 2026-08-31
 tags: network, dns
 ---
 
