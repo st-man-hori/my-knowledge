@@ -293,7 +293,7 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      limit: 5
+      limit: 15
       showTags: false
       hideTagPages: true
       hideFolderPages: true
