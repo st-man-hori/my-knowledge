@@ -252,6 +252,19 @@ details.note-properties {
       background: var(--highlight);
     }
   }
+
+  // "notes" is the site's all-notes listing, not a lesser file entry buried
+  // among the tech/* topic folders — give it the same color/size/weight as
+  // a folder link so it reads as a top-level section, not a stray page.
+  a.nav-file-title[href$="/notes.base"] {
+    color: var(--secondary);
+    font-weight: $semiBoldWeight;
+    font-size: 1rem;
+
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
 }
 
 // ----- mobile (SP) adjustments -----
@@ -283,6 +296,10 @@ details.note-properties {
     a.nav-file-title {
       font-size: 1.05rem;
       line-height: 2;
+    }
+
+    a.nav-file-title[href$="/notes.base"] {
+      font-size: 1.1rem;
     }
 
     // The chevron is the only way to expand/collapse a folder (folder names
