@@ -212,7 +212,7 @@ plugins:
       # and content-meta (20).
       priority: 12
   - source: "./plugins/avatar"
-    enabled: true
+    enabled: false
     options:
       src: static/icon.png
       alt: "st-man-hori"
