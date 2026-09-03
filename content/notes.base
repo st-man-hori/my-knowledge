@@ -1,0 +1,26 @@
+filters:
+  and:
+    - file.name != "index"
+    - file.name != "404"
+    - file.name != "support"
+    - file.ext == "md"
+properties:
+  title:
+    displayName: タイトル
+  date:
+    displayName: 日付
+  file.tags:
+    displayName: タグ
+views:
+  - type: table-tags
+    name: "2026"
+    filters:
+      and:
+        - date >= "2026-01-01"
+    order:
+      - date
+      - title
+      - file.tags
+    sort:
+      - property: date
+        direction: DESC
