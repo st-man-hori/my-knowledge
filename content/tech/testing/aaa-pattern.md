@@ -5,7 +5,7 @@ created: 2026-09-03
 tags: test, test-pattern, aaa
 ---
 
-PHPUnitのテストを書いているときに採用しているテストの構造パターン「AAA」を詳しく解説します。
+テストの構造パターン「AAA」を詳しく解説します。
 
 ## AAAパターンとは
 
