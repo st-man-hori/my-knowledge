@@ -211,11 +211,21 @@ plugins:
       # Right below the article title (10), above note-properties (15)
       # and content-meta (20).
       priority: 12
+  - source: "./plugins/avatar"
+    enabled: true
+    options:
+      src: static/icon.png
+      alt: "st-man-hori"
+    layout:
+      position: left
+      priority: 9
+      group: brand
   - source: "@quartz-community/page-title"
     enabled: true
     layout:
       position: left
       priority: 10
+      group: brand
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
@@ -306,6 +316,10 @@ layout:
       priority: 35
       direction: row
       gap: 0.5rem
+    brand:
+      priority: 9
+      direction: row
+      gap: 0.6rem
   byPageType:
     "404":
       positions:

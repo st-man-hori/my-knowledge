@@ -1,0 +1,38 @@
+{
+  "name": "avatar",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components.ts",
+    "./package.json": "./package.json"
+  },
+  "quartz": {
+    "name": "avatar",
+    "displayName": "Avatar",
+    "category": "component",
+    "version": "1.0.0",
+    "defaultOrder": 5,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "src": "static/icon.png",
+      "alt": "avatar"
+    },
+    "components": {
+      "Avatar": {
+        "displayName": "Avatar",
+        "defaultPosition": "left",
+        "defaultPriority": 9
+      }
+    },
+    "optionSchema": {
+      "src": {
+        "type": "string"
+      },
+      "alt": {
+        "type": "string"
+      }
+    }
+  }
+}
