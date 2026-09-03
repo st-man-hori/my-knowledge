@@ -284,5 +284,28 @@ details.note-properties {
       font-size: 1.05rem;
       line-height: 2;
     }
+
+    // The chevron is the only way to expand/collapse a folder (folder names
+    // are links, per folderClickBehavior: link in quartz.config.yaml), but
+    // it renders at just 12x12px. Scale the SVG itself up (viewBox scaling
+    // thickens the stroke too, so it doesn't look spindly) and pad out the
+    // tap target to ~36px, pulling the box back in on top/left with a
+    // matching negative margin so the row's layout doesn't shift there.
+    // The right margin stays slightly positive (net ~11px gap) instead of
+    // negative: a negative value here would let the folder-title link's box
+    // overlap the last few px of the icon's tap padding, so taps aimed at
+    // the chevron's edge would land on the link instead.
+    .folder-icon {
+      width: 18px;
+      height: 18px;
+      padding: 9px;
+      margin: -9px 5px -9px -9px;
+      box-sizing: content-box;
+    }
+
+    // Nudge the chevron+label pair off the drawer's left edge a touch.
+    .folder-container {
+      margin-left: 0.4rem;
+    }
   }
 }
