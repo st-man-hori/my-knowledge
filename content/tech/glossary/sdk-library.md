@@ -1,5 +1,5 @@
 ---
-title: SDKとライブラリの違い
+title: SDKとライブラリの違いについて
 description: SDKとライブラリの違いについて、具体例を交えてわかりやすく解説します。
 created: 2026-09-02
 tags: sdk, library, programming

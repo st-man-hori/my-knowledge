@@ -1,5 +1,5 @@
 ---
-title: JWT (JSON Web Token)
+title: JWT (JSON Web Token)について
 description: JWTの構造(ヘッダー・ペイロード・署名)とHS256/RS256の違い、メリット・デメリットを認証フローの図解付きで解説します。
 created: 2026-08-31
 tags: security, jwt

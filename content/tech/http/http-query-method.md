@@ -1,5 +1,5 @@
 ---
-title: HTTPの新メソッド「QUERY」
+title: HTTPの新メソッド「QUERY」について
 description: 2026年6月に追加されたHTTPの新メソッドQUERYを、GET/POSTとの比較とHonoでの実装検証を交えて解説します。
 created: 2026-09-01
 tags: http
