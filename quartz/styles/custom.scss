@@ -30,6 +30,10 @@ article {
     padding-bottom: 0.4rem;
     border-bottom: 1px solid var(--lightgray);
   }
+
+  p, ul, li, ol {
+    color: var(--dark);
+  }
 }
 
 // ----- page header -----
