@@ -27,6 +27,4 @@ AIに聞けばだいたいのことはすぐ答えが返ってくる時代です
 
 ## 🐶 About Me
 
-[GitHub](https://github.com/st-man-hori)  
-[Zenn](https://zenn.dev/orisend)  
-[Qiita](https://qiita.com/st-man-hori)
+[プロフィール](/about)
