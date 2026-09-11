@@ -1,0 +1,17 @@
+{
+  "name": "link-preview-card",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "dependencies": {
+    "hast-util-from-html": "*",
+    "unist-util-visit": "*"
+  },
+  "quartz": {
+    "name": "link-preview-card",
+    "displayName": "Link Preview Card",
+    "category": "transformer",
+    "defaultOrder": 65,
+    "defaultEnabled": true
+  }
+}
