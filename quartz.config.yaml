@@ -84,6 +84,9 @@ plugins:
       # links can be used instead of raw <a> tags.
       openLinksInNewTab: true
     order: 60
+  - source: "./plugins/link-preview-card"
+    enabled: true
+    order: 65
   - source: "@quartz-community/description"
     enabled: true
     order: 70
