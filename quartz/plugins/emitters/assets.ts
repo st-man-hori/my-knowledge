@@ -27,11 +27,18 @@ const filesToCopy = async (argv: Argv, cfg: QuartzConfig, excludeExtensions: Set
   return await glob("**", argv.directory, excludePatterns)
 }
 
+// Assets are copied verbatim, but slugifyFilePath always strips .html
+// (it assumes any .md/.html source becomes an extensionless page slug).
+// Restore the extension here so passthrough .html assets keep it.
+const assetOutputName = (fp: FilePath) => {
+  const ext = path.extname(fp)
+  const slugified = slugifyFilePath(fp) as string
+  return ext === ".html" && !slugified.endsWith(ext) ? slugified + ext : slugified
+}
+
 const copyFile = async (argv: Argv, fp: FilePath) => {
   const src = joinSegments(argv.directory, fp) as FilePath
-
-  const name = slugifyFilePath(fp)
-  const dest = joinSegments(argv.output, name) as FilePath
+  const dest = joinSegments(argv.output, assetOutputName(fp)) as FilePath
 
   const dir = path.dirname(dest) as FilePath
   await fs.promises.mkdir(dir, { recursive: true })
@@ -59,8 +66,7 @@ export const Assets: QuartzEmitterPlugin = () => {
         if (changeEvent.type === "add" || changeEvent.type === "change") {
           yield copyFile(ctx.argv, changeEvent.path)
         } else if (changeEvent.type === "delete") {
-          const name = slugifyFilePath(changeEvent.path)
-          const dest = joinSegments(ctx.argv.output, name) as FilePath
+          const dest = joinSegments(ctx.argv.output, assetOutputName(changeEvent.path)) as FilePath
           await fs.promises.unlink(dest)
         }
       }
