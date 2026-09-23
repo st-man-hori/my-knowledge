@@ -1,7 +1,7 @@
 ---
 title: SQLのJOINとUNIONについて
 description: SQLのJOINとUNIONの概要と使い方、種類について解説します。
-created: 2026-09-07
+created: 2026-09-23
 tags: sql, join, データベース, DB, union
 ---
 
