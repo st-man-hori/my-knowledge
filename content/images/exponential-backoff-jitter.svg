@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+
+  <!-- 背景 -->
+  <rect width="900" height="560" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">ジッター（Jitter）</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">待機時間にランダムな揺らぎを加えて、リトライのタイミングをずらす</text>
+
+  <!-- ===== 時間軸 ===== -->
+  <line x1="200" y1="110" x2="200" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="280" y1="110" x2="280" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="360" y1="110" x2="360" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="440" y1="110" x2="440" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="520" y1="110" x2="520" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="600" y1="110" x2="600" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="680" y1="110" x2="680" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="760" y1="110" x2="760" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="840" y1="110" x2="840" y2="500" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="200" y1="500" x2="840" y2="500" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="200" y1="500" x2="200" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="200" y="524" text-anchor="middle" font-size="13" fill="#4B5563">0</text>
+  <line x1="280" y1="500" x2="280" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="280" y="524" text-anchor="middle" font-size="13" fill="#4B5563">1</text>
+  <line x1="360" y1="500" x2="360" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="360" y="524" text-anchor="middle" font-size="13" fill="#4B5563">2</text>
+  <line x1="440" y1="500" x2="440" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="440" y="524" text-anchor="middle" font-size="13" fill="#4B5563">3</text>
+  <line x1="520" y1="500" x2="520" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="520" y="524" text-anchor="middle" font-size="13" fill="#4B5563">4</text>
+  <line x1="600" y1="500" x2="600" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="600" y="524" text-anchor="middle" font-size="13" fill="#4B5563">5</text>
+  <line x1="680" y1="500" x2="680" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="680" y="524" text-anchor="middle" font-size="13" fill="#4B5563">6</text>
+  <line x1="760" y1="500" x2="760" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="760" y="524" text-anchor="middle" font-size="13" fill="#4B5563">7</text>
+  <line x1="840" y1="500" x2="840" y2="506" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="840" y="524" text-anchor="middle" font-size="13" fill="#4B5563">8</text>
+  <text x="854" y="524" font-size="13" fill="#4B5563">秒</text>
+
+  <!-- ===== ジッターなし：全員が同じタイミングでリトライする ===== -->
+  <text x="40" y="125" font-size="16" font-weight="bold" fill="#B91C1C">ジッターなし：全員が同じタイミングでリトライする</text>
+  <rect x="182" y="145" width="36" height="120" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">集中</text>
+  <rect x="262" y="145" width="36" height="120" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="280" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">集中</text>
+  <rect x="422" y="145" width="36" height="120" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="440" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">集中</text>
+  <rect x="742" y="145" width="36" height="120" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="760" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">集中</text>
+  <text x="40" y="170" font-size="14" font-weight="bold" fill="#1D4ED8">クライアントA</text>
+  <line x1="200" y1="165" x2="760" y2="165" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="165" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="280" cy="165" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="440" cy="165" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="760" cy="165" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="40" y="210" font-size="14" font-weight="bold" fill="#047857">クライアントB</text>
+  <line x1="200" y1="205" x2="760" y2="205" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="205" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="280" cy="205" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="440" cy="205" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="760" cy="205" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="40" y="250" font-size="14" font-weight="bold" fill="#6D28D9">クライアントC</text>
+  <line x1="200" y1="245" x2="760" y2="245" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="245" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="280" cy="245" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="440" cy="245" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="760" cy="245" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- ===== ジッターあり：リトライのタイミングがばらけて負荷が分散する ===== -->
+  <text x="40" y="315" font-size="16" font-weight="bold" fill="#047857">ジッターあり：リトライのタイミングがばらけて負荷が分散する</text>
+  <rect x="182" y="335" width="36" height="120" rx="8" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="475" text-anchor="middle" font-size="12" font-weight="bold" fill="#B91C1C">集中</text>
+  <text x="40" y="360" font-size="14" font-weight="bold" fill="#1D4ED8">クライアントA</text>
+  <line x1="200" y1="355" x2="768" y2="355" stroke="#3B82F6" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="355" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="296" cy="355" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="480" cy="355" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="768" cy="355" r="9" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="40" y="400" font-size="14" font-weight="bold" fill="#047857">クライアントB</text>
+  <line x1="200" y1="395" x2="824" y2="395" stroke="#10B981" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="395" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="336" cy="395" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="448" cy="395" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="824" cy="395" r="9" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="40" y="440" font-size="14" font-weight="bold" fill="#6D28D9">クライアントC</text>
+  <line x1="200" y1="435" x2="792" y2="435" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="4 4" opacity="0.6"/>
+  <circle cx="200" cy="435" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="316" cy="435" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="512" cy="435" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="792" cy="435" r="9" fill="#8B5CF6" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="40" y="545" font-size="12" fill="#6B7280">● は各クライアントがサーバーへ送ったリクエスト（最初の失敗は同時に起きたと仮定）</text>
+</svg>

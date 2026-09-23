@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 490" width="900" height="490" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+
+  <!-- 背景 -->
+  <rect width="900" height="490" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">指数バックオフ</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">失敗するたびに待機時間を2倍にして、リトライの間隔を広げていく</text>
+
+  <!-- ===== 時間軸 ===== -->
+  <line x1="120" y1="110" x2="120" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="165" y1="110" x2="165" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="210" y1="110" x2="210" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="255" y1="110" x2="255" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="300" y1="110" x2="300" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="345" y1="110" x2="345" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="390" y1="110" x2="390" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="435" y1="110" x2="435" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="480" y1="110" x2="480" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="525" y1="110" x2="525" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="570" y1="110" x2="570" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="615" y1="110" x2="615" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="660" y1="110" x2="660" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="705" y1="110" x2="705" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="750" y1="110" x2="750" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="795" y1="110" x2="795" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="840" y1="110" x2="840" y2="410" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="120" y1="410" x2="840" y2="410" stroke="#9CA3AF" stroke-width="1.5"/>
+  <line x1="120" y1="410" x2="120" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="120" y="434" text-anchor="middle" font-size="13" fill="#4B5563">0</text>
+  <line x1="165" y1="410" x2="165" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="165" y="434" text-anchor="middle" font-size="13" fill="#4B5563">1</text>
+  <line x1="210" y1="410" x2="210" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="210" y="434" text-anchor="middle" font-size="13" fill="#4B5563">2</text>
+  <line x1="255" y1="410" x2="255" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="255" y="434" text-anchor="middle" font-size="13" fill="#4B5563">3</text>
+  <line x1="300" y1="410" x2="300" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="300" y="434" text-anchor="middle" font-size="13" fill="#4B5563">4</text>
+  <line x1="345" y1="410" x2="345" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="345" y="434" text-anchor="middle" font-size="13" fill="#4B5563">5</text>
+  <line x1="390" y1="410" x2="390" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="390" y="434" text-anchor="middle" font-size="13" fill="#4B5563">6</text>
+  <line x1="435" y1="410" x2="435" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="435" y="434" text-anchor="middle" font-size="13" fill="#4B5563">7</text>
+  <line x1="480" y1="410" x2="480" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="480" y="434" text-anchor="middle" font-size="13" fill="#4B5563">8</text>
+  <line x1="525" y1="410" x2="525" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="525" y="434" text-anchor="middle" font-size="13" fill="#4B5563">9</text>
+  <line x1="570" y1="410" x2="570" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="570" y="434" text-anchor="middle" font-size="13" fill="#4B5563">10</text>
+  <line x1="615" y1="410" x2="615" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="615" y="434" text-anchor="middle" font-size="13" fill="#4B5563">11</text>
+  <line x1="660" y1="410" x2="660" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="660" y="434" text-anchor="middle" font-size="13" fill="#4B5563">12</text>
+  <line x1="705" y1="410" x2="705" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="705" y="434" text-anchor="middle" font-size="13" fill="#4B5563">13</text>
+  <line x1="750" y1="410" x2="750" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="750" y="434" text-anchor="middle" font-size="13" fill="#4B5563">14</text>
+  <line x1="795" y1="410" x2="795" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="795" y="434" text-anchor="middle" font-size="13" fill="#4B5563">15</text>
+  <line x1="840" y1="410" x2="840" y2="416" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="840" y="434" text-anchor="middle" font-size="13" fill="#4B5563">16</text>
+  <text x="854" y="434" font-size="13" fill="#4B5563">秒</text>
+
+  <!-- ===== 固定間隔 ===== -->
+  <text x="109" y="130" font-size="15" font-weight="bold" fill="#B45309">固定間隔（毎回1秒待つ）</text>
+  <text x="840" y="130" text-anchor="end" font-size="14" font-weight="bold" fill="#B91C1C">リクエスト 16回</text>
+  <rect x="120" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="165" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="210" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="255" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="300" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="345" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="390" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="435" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="480" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="525" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="570" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="615" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="660" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="705" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <rect x="750" y="164" width="45" height="12" fill="#FEF3C7"/>
+  <circle cx="120" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M115.05,165.05 L124.95,174.95 M124.95,165.05 L115.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="165" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M160.05,165.05 L169.95,174.95 M169.95,165.05 L160.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="210" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M205.05,165.05 L214.95,174.95 M214.95,165.05 L205.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="255" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M250.05,165.05 L259.95,174.95 M259.95,165.05 L250.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="300" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M295.05,165.05 L304.95,174.95 M304.95,165.05 L295.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="345" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M340.05,165.05 L349.95,174.95 M349.95,165.05 L340.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="390" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M385.05,165.05 L394.95,174.95 M394.95,165.05 L385.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="435" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M430.05,165.05 L439.95,174.95 M439.95,165.05 L430.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="480" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M475.05,165.05 L484.95,174.95 M484.95,165.05 L475.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="525" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M520.05,165.05 L529.95,174.95 M529.95,165.05 L520.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="570" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M565.05,165.05 L574.95,174.95 M574.95,165.05 L565.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="615" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M610.05,165.05 L619.95,174.95 M619.95,165.05 L610.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="660" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M655.05,165.05 L664.95,174.95 M664.95,165.05 L655.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="705" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M700.05,165.05 L709.95,174.95 M709.95,165.05 L700.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="750" cy="170" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M745.05,165.05 L754.95,174.95 M754.95,165.05 L745.05,174.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="795" cy="170" r="11" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <path d="M790,170 L793.5,174 L800.5,165.5" fill="none" stroke="#047857" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="109" y="210" font-size="13" fill="#6B7280">サーバーが回復する前から、同じ間隔でリクエストを送り続けてしまう</text>
+
+  <!-- ===== 指数バックオフ ===== -->
+  <text x="109" y="265" font-size="15" font-weight="bold" fill="#1D4ED8">指数バックオフ（1秒 → 2秒 → 4秒 → 8秒）</text>
+  <text x="840" y="265" text-anchor="end" font-size="14" font-weight="bold" fill="#047857">リクエスト 5回</text>
+  <rect x="120" y="314" width="45" height="12" fill="#DBEAFE"/>
+  <text x="142.5" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">1秒</text>
+  <rect x="165" y="314" width="90" height="12" fill="#DBEAFE"/>
+  <text x="210" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">待機 2秒</text>
+  <rect x="255" y="314" width="180" height="12" fill="#DBEAFE"/>
+  <text x="345" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">待機 4秒</text>
+  <rect x="435" y="314" width="360" height="12" fill="#DBEAFE"/>
+  <text x="615" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">待機 8秒</text>
+  <circle cx="120" cy="320" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M115.05,315.05 L124.95,324.95 M124.95,315.05 L115.05,324.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="120" y="352" text-anchor="middle" font-size="12" fill="#6B7280">1回目</text>
+  <circle cx="165" cy="320" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M160.05,315.05 L169.95,324.95 M169.95,315.05 L160.05,324.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="165" y="352" text-anchor="middle" font-size="12" fill="#6B7280">2回目</text>
+  <circle cx="255" cy="320" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M250.05,315.05 L259.95,324.95 M259.95,315.05 L250.05,324.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="255" y="352" text-anchor="middle" font-size="12" fill="#6B7280">3回目</text>
+  <circle cx="435" cy="320" r="11" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M430.05,315.05 L439.95,324.95 M439.95,315.05 L430.05,324.95" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="435" y="352" text-anchor="middle" font-size="12" fill="#6B7280">4回目</text>
+  <circle cx="795" cy="320" r="11" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <path d="M790,320 L793.5,324 L800.5,315.5" fill="none" stroke="#047857" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="795" y="352" text-anchor="middle" font-size="12" fill="#6B7280">5回目</text>
+  <text x="109" y="382" font-size="13" fill="#6B7280">間隔を空けることで、サーバーが回復するまでの無駄なリクエストを減らせる</text>
+
+  <!-- ===== 凡例 ===== -->
+  <circle cx="124" cy="468" r="8" fill="#FEE2E2" stroke="#EF4444" stroke-width="2"/>
+  <path d="M120.4,464.4 L127.6,471.6 M127.6,464.4 L120.4,471.6" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="138" y="473" font-size="12" fill="#4B5563">失敗</text>
+  <circle cx="190" cy="468" r="8" fill="#D1FAE5" stroke="#10B981" stroke-width="2"/>
+  <path d="M185,468 L188.5,472 L195.5,463.5" fill="none" stroke="#047857" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="204" y="473" font-size="12" fill="#4B5563">成功</text>
+</svg>
