@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 510" width="900" height="510" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="510" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">プロトタイピング</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">試作品を作ってユーザーに試してもらい、要件を固めてから本開発に進む</text>
+
+  <!-- ===== 要望の聞き取り ===== -->
+  <rect x="40" y="250" width="140" height="60" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="110" y="276" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">要望の聞き取り</text>
+  <text x="110" y="296" text-anchor="middle" font-size="11" fill="#4B5563">まだ曖昧な状態</text>
+  <line x1="182" y1="280" x2="264" y2="280" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== 試作と評価のサイクル ===== -->
+  <circle cx="380" cy="280" r="110" fill="#EFF6FF" stroke="none"/>
+  <path d="M444.7,191.0 A110,110 0 0 1 489.4,268.5" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M424.7,380.5 A110,110 0 0 1 335.3,380.5" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M270.6,268.5 A110,110 0 0 1 315.3,191.0" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="380" y="276" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">要件が固まるまで</text>
+  <text x="380" y="296" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">繰り返す</text>
+  <rect x="312.0" y="148.0" width="136" height="44" rx="22" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="380.0" y="167.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">試作品を作る</text>
+  <text x="380.0" y="183.0" text-anchor="middle" font-size="11" fill="#1F2937">画面イメージなど</text>
+  <rect x="407.3" y="313.0" width="136" height="44" rx="22" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="475.3" y="332.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">ユーザーが評価</text>
+  <text x="475.3" y="348.0" text-anchor="middle" font-size="11" fill="#1F2937">実際に見て触る</text>
+  <rect x="216.7" y="313.0" width="136" height="44" rx="22" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="284.7" y="332.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">修正する</text>
+  <text x="284.7" y="348.0" text-anchor="middle" font-size="11" fill="#1F2937">意見を反映</text>
+
+  <!-- ユーザーの声 -->
+  <path d="M492,359 L500,376 L516,376 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="470" y="375" width="170" height="34" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+  <line x1="501.5" y1="375" x2="514.5" y2="375" stroke="#FEF3C7" stroke-width="2.5"/>
+  <text x="555" y="397" text-anchor="middle" font-size="13" font-weight="bold" fill="#B45309">「ここはこうしたい！」</text>
+
+  <!-- ===== 本開発へ ===== -->
+  <line x1="496" y1="280" x2="620" y2="280" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="558.0" y="270" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">要件が確定</text>
+  <rect x="624" y="186" width="236" height="188" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="742" y="214" text-anchor="middle" font-size="16" font-weight="bold" fill="#047857">本開発</text>
+  <rect x="672" y="228" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#34D399"/>
+  <text x="742" y="246" text-anchor="middle" font-size="13" fill="#065F46">設計</text>
+  <line x1="742" y1="255" x2="742" y2="262" stroke="#059669" stroke-width="1.5"/>
+  <rect x="672" y="264" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#34D399"/>
+  <text x="742" y="282" text-anchor="middle" font-size="13" fill="#065F46">実装</text>
+  <line x1="742" y1="291" x2="742" y2="298" stroke="#059669" stroke-width="1.5"/>
+  <rect x="672" y="300" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#34D399"/>
+  <text x="742" y="318" text-anchor="middle" font-size="13" fill="#065F46">テスト</text>
+  <line x1="742" y1="327" x2="742" y2="334" stroke="#059669" stroke-width="1.5"/>
+  <rect x="672" y="336" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#34D399"/>
+  <text x="742" y="354" text-anchor="middle" font-size="13" fill="#065F46">リリース</text>
+
+  <!-- 補足 -->
+  <text x="450" y="470" text-anchor="middle" font-size="13" fill="#4B5563">完成前に実物に近いものを見てもらうことで、「思っていたのと違う」を早い段階で発見できる</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="580" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">スクラム</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">3つの役割のチームで、スプリント（2〜4週間）を繰り返して開発を進める</text>
+
+  <!-- ===== 3つの役割 ===== -->
+  <rect x="60" y="100" width="240" height="60" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+  <text x="180" y="124" text-anchor="middle" font-size="15" font-weight="bold" fill="#B45309">プロダクトオーナー</text>
+  <text x="180" y="146" text-anchor="middle" font-size="12" fill="#1F2937">何を作るか・優先順位を決める</text>
+  <rect x="330" y="100" width="240" height="60" rx="8" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="450" y="124" text-anchor="middle" font-size="15" font-weight="bold" fill="#6D28D9">スクラムマスター</text>
+  <text x="450" y="146" text-anchor="middle" font-size="12" fill="#1F2937">進め方を支援し、障害を取り除く</text>
+  <rect x="600" y="100" width="240" height="60" rx="8" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <text x="720" y="124" text-anchor="middle" font-size="15" font-weight="bold" fill="#047857">開発チーム</text>
+  <text x="720" y="146" text-anchor="middle" font-size="12" fill="#1F2937">実際にプロダクトを作る</text>
+
+  <!-- ===== プロダクトバックログ ===== -->
+  <text x="100.0" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">プロダクト</text>
+  <text x="100.0" y="254" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">バックログ</text>
+  <rect x="40" y="260" width="120" height="142" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="50" y="268" width="100" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="50" y="294" width="100" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="50" y="320" width="100" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="50" y="346" width="100" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="50" y="372" width="100" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+
+  <!-- ===== スプリントプランニング ===== -->
+  <line x1="164" y1="330" x2="186" y2="330" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="190" y="302" width="110" height="56" rx="28" fill="#2563EB"/>
+  <text x="245" y="326" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">スプリント</text>
+  <text x="245" y="344" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">プランニング</text>
+  <line x1="302" y1="330" x2="326" y2="330" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== スプリントバックログ ===== -->
+  <text x="380.0" y="268" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">スプリント</text>
+  <text x="380.0" y="284" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">バックログ</text>
+  <rect x="330" y="290" width="100" height="90" rx="6" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="340" y="298" width="80" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="340" y="324" width="80" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="340" y="350" width="80" height="20" rx="3" fill="#DBEAFE" stroke="#93C5FD"/>
+  <line x1="434" y1="330" x2="472" y2="330" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== スプリント ===== -->
+  <circle cx="560" cy="330" r="80" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+  <text x="560" y="340" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A8A">スプリント</text>
+  <text x="560" y="362" text-anchor="middle" font-size="13" fill="#1F2937">2〜4週間</text>
+  <text x="560" y="380" text-anchor="middle" font-size="11" fill="#4B5563">（開発を進める）</text>
+  <!-- デイリースクラム -->
+  <circle cx="560" cy="238" r="38" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <path d="M552,192.7 A46,46 0 0 1 605.3,246" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="560" y="232" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A8A">デイリー</text>
+  <text x="560" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A8A">スクラム</text>
+  <text x="560" y="262" text-anchor="middle" font-size="10" fill="#4B5563">毎日15分</text>
+
+  <!-- ===== インクリメント ===== -->
+  <line x1="644" y1="330" x2="696" y2="330" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="700" y="300" width="160" height="60" rx="8" fill="#2563EB"/>
+  <text x="780" y="326" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">インクリメント</text>
+  <text x="780" y="346" text-anchor="middle" font-size="12" fill="#EFF6FF">動くプロダクト</text>
+
+  <!-- ===== スプリントレビュー / 振り返り ===== -->
+  <line x1="780" y1="362" x2="780" y2="446" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="700" y="450" width="160" height="56" rx="28" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="780" y="474" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">スプリントレビュー</text>
+  <text x="780" y="492" text-anchor="middle" font-size="11" fill="#1F2937">成果物を確認する</text>
+  <line x1="698" y1="478" x2="654" y2="478" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="490" y="450" width="160" height="56" rx="28" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="570" y="474" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">振り返り</text>
+  <text x="570" y="492" text-anchor="middle" font-size="11" fill="#1F2937">チームの進め方を改善</text>
+
+  <!-- ===== 次のスプリントへ ===== -->
+  <path d="M488,478 H100 V410" fill="none" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="295" y="468" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">学びを反映して次のスプリントへ</text>
+
+  <!-- 補足 -->
+  <text x="450" y="550" text-anchor="middle" font-size="13" fill="#4B5563">このサイクルを繰り返し、継続的に価値を届けながらチームも改善していく</text>
+</svg>

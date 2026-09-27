@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">アジャイル開発</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">短いサイクルで「計画 → 実装 → 評価」を繰り返し、少しずつ機能を増やしていく</text>
+
+
+  <!-- ===== イテレーション1 ===== -->
+  <circle cx="150" cy="230" r="85" fill="#F8FAFC" stroke="none"/>
+  <path d="M195.0,157.9 A85,85 0 0 1 234.9,227.0" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M189.9,305.1 A85,85 0 0 1 110.1,305.1" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M65.1,227.0 A85,85 0 0 1 105.0,157.9" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="150" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">イテレーション1</text>
+  <text x="150" y="250" text-anchor="middle" font-size="11" fill="#4B5563">（1〜4週間程度）</text>
+  <rect x="110.0" y="129.0" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="150.0" y="150.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">計画</text>
+  <rect x="183.6" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="223.6" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">実装</text>
+  <rect x="36.4" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="76.4" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">評価</text>
+  <line x1="150" y1="327" x2="150" y2="357" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="150" y="385" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">リリース①</text>
+  <rect x="90" y="490" width="120" height="26" rx="4" fill="#BFDBFE" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="150" y="508" text-anchor="middle" font-size="13" fill="#1E3A8A">機能A</text>
+  <line x1="253" y1="230" x2="347" y2="230" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="300" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">フィードバック</text>
+  <text x="300" y="252" text-anchor="middle" font-size="12" fill="#059669">を反映</text>
+
+  <!-- ===== イテレーション2 ===== -->
+  <circle cx="450" cy="230" r="85" fill="#F8FAFC" stroke="none"/>
+  <path d="M495.0,157.9 A85,85 0 0 1 534.9,227.0" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M489.9,305.1 A85,85 0 0 1 410.1,305.1" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M365.1,227.0 A85,85 0 0 1 405.0,157.9" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="450" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">イテレーション2</text>
+  <text x="450" y="250" text-anchor="middle" font-size="11" fill="#4B5563">（1〜4週間程度）</text>
+  <rect x="410.0" y="129.0" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="450.0" y="150.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">計画</text>
+  <rect x="483.6" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="523.6" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">実装</text>
+  <rect x="336.4" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="376.4" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">評価</text>
+  <line x1="450" y1="327" x2="450" y2="357" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="385" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">リリース②</text>
+  <rect x="390" y="490" width="120" height="26" rx="4" fill="#BFDBFE" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="450" y="508" text-anchor="middle" font-size="13" fill="#1E3A8A">機能A</text>
+  <rect x="390" y="460" width="120" height="26" rx="4" fill="#93C5FD" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="450" y="478" text-anchor="middle" font-size="13" fill="#1E3A8A">機能B</text>
+  <line x1="553" y1="230" x2="647" y2="230" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="600" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">フィードバック</text>
+  <text x="600" y="252" text-anchor="middle" font-size="12" fill="#059669">を反映</text>
+
+  <!-- ===== イテレーション3 ===== -->
+  <circle cx="750" cy="230" r="85" fill="#F8FAFC" stroke="none"/>
+  <path d="M795.0,157.9 A85,85 0 0 1 834.9,227.0" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M789.9,305.1 A85,85 0 0 1 710.1,305.1" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M665.1,227.0 A85,85 0 0 1 705.0,157.9" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="750" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">イテレーション3</text>
+  <text x="750" y="250" text-anchor="middle" font-size="11" fill="#4B5563">（1〜4週間程度）</text>
+  <rect x="710.0" y="129.0" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="750.0" y="150.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">計画</text>
+  <rect x="783.6" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="823.6" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">実装</text>
+  <rect x="636.4" y="256.5" width="80" height="32" rx="16" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="676.4" y="277.5" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">評価</text>
+  <line x1="750" y1="327" x2="750" y2="357" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="750" y="385" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">リリース③</text>
+  <rect x="690" y="490" width="120" height="26" rx="4" fill="#BFDBFE" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="750" y="508" text-anchor="middle" font-size="13" fill="#1E3A8A">機能A</text>
+  <rect x="690" y="460" width="120" height="26" rx="4" fill="#93C5FD" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="750" y="478" text-anchor="middle" font-size="13" fill="#1E3A8A">機能B</text>
+  <rect x="690" y="430" width="120" height="26" rx="4" fill="#60A5FA" stroke="#1D4ED8" stroke-width="1"/>
+  <text x="750" y="448" text-anchor="middle" font-size="13" fill="#1E3A8A">機能C</text>
+
+  <!-- 時間軸 -->
+  <line x1="60" y1="545" x2="840" y2="545" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="840" y="570" text-anchor="end" font-size="13" fill="#4B5563">時間</text>
+  <text x="60" y="570" font-size="13" fill="#4B5563">リリースのたびに動くものを届け、ユーザーの声をもとに次の計画を立てる</text>
+</svg>

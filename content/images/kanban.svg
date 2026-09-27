@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="580" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">カンバン</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">カンバンボードでタスクの状態を見える化し、左から右へ流して進捗を管理する</text>
+
+
+  <!-- ===== 未着手 ===== -->
+  <rect x="60" y="104" width="240" height="356" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M60,148 V112 A8,8 0 0 1 68,104 H292 A8,8 0 0 1 300,112 V148 Z" fill="#6B7280"/>
+  <text x="180" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">未着手</text>
+  <rect x="80" y="166" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="80" y="166" width="6" height="46" rx="3" fill="#6B7280"/>
+  <text x="100" y="194" font-size="14" fill="#1F2937">検索機能の追加</text>
+  <rect x="80" y="226" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="80" y="226" width="6" height="46" rx="3" fill="#6B7280"/>
+  <text x="100" y="254" font-size="14" fill="#1F2937">CSV出力</text>
+  <rect x="80" y="286" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="80" y="286" width="6" height="46" rx="3" fill="#6B7280"/>
+  <text x="100" y="314" font-size="14" fill="#1F2937">通知メール</text>
+  <rect x="80" y="346" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="80" y="346" width="6" height="46" rx="3" fill="#6B7280"/>
+  <text x="100" y="374" font-size="14" fill="#1F2937">ヘルプページ</text>
+
+  <!-- ===== 進行中 ===== -->
+  <rect x="330" y="104" width="240" height="356" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <path d="M330,148 V112 A8,8 0 0 1 338,104 H562 A8,8 0 0 1 570,112 V148 Z" fill="#2563EB"/>
+  <text x="420" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">進行中</text>
+  <rect x="458" y="115" width="84" height="24" rx="12" fill="#FFFFFF"/>
+  <text x="500" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="#DC2626">WIP上限 3</text>
+  <rect x="350" y="166" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="350" y="166" width="6" height="46" rx="3" fill="#2563EB"/>
+  <text x="370" y="194" font-size="14" fill="#1F2937">ユーザー登録</text>
+  <rect x="350" y="226" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="350" y="226" width="6" height="46" rx="3" fill="#2563EB"/>
+  <text x="370" y="254" font-size="14" fill="#1F2937">決済API連携</text>
+  <rect x="350" y="286" width="200" height="46" rx="6" fill="none" stroke="#93C5FD" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="450" y="314" text-anchor="middle" font-size="12" fill="#6B7280">空き枠（あと1つまで）</text>
+
+  <!-- ===== 完了 ===== -->
+  <rect x="600" y="104" width="240" height="356" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <path d="M600,148 V112 A8,8 0 0 1 608,104 H832 A8,8 0 0 1 840,112 V148 Z" fill="#059669"/>
+  <text x="720" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">完了</text>
+  <rect x="620" y="166" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="620" y="166" width="6" height="46" rx="3" fill="#059669"/>
+  <text x="640" y="194" font-size="14" fill="#1F2937">トップページ</text>
+  <rect x="620" y="226" width="200" height="46" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+  <rect x="620" y="226" width="6" height="46" rx="3" fill="#059669"/>
+  <text x="640" y="254" font-size="14" fill="#1F2937">DB設計</text>
+
+  <!-- ===== タスクの流れ ===== -->
+  <line x1="180" y1="490" x2="444" y2="490" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="315" y="482" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">着手する</text>
+  <line x1="450" y1="490" x2="714" y2="490" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="585" y="482" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">終わったら移す</text>
+  <circle cx="180" cy="490" r="5" fill="#6B7280"/>
+  <circle cx="450" cy="490" r="5" fill="#6B7280"/>
+
+  <!-- 補足 -->
+  <text x="450" y="532" text-anchor="middle" font-size="13" fill="#4B5563">進行中のタスク数に上限（WIP制限）を設けることで、作業の詰まりを防ぎ流れを保つ</text>
+  <text x="450" y="554" text-anchor="middle" font-size="13" fill="#4B5563">スクラムのような決まった期間（スプリント）はなく、タスクは随時追加・着手できる</text>
+</svg>
