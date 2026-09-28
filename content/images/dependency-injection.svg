@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="600" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">依存性注入（DI）</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">必要なものは自分で作らず、外から渡してもらう</text>
+
+  <!-- ===== 左: DIを行わない場合 ===== -->
+  <rect x="30" y="100" width="405" height="470" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="232.5" y="132" text-anchor="middle" font-size="17" font-weight="bold" fill="#B91C1C">DIを行わない場合</text>
+
+  <rect x="60" y="150" width="345" height="170" rx="8" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="232.5" y="178" text-anchor="middle" font-size="15" font-weight="bold" fill="#111827">UserController</text>
+  <text x="232.5" y="202" text-anchor="middle" font-size="12" fill="#4B5563">コンストラクタ内で自分で new する</text>
+  <rect x="140" y="215" width="185" height="50" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="232.5" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">UserService</text>
+  <text x="232.5" y="298" text-anchor="middle" font-size="12" font-family="Consolas,Menlo,monospace" fill="#991B1B">new UserService();</text>
+  <text x="232.5" y="344" text-anchor="middle" font-size="14" font-weight="bold" fill="#B91C1C">中に埋め込まれていて固定（密結合）</text>
+
+  <line x1="50" y1="362" x2="415" y2="362" stroke="#D1D5DB" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="50" y="384" font-size="12" fill="#6B7280">例えるなら…</text>
+
+  <!-- 電池内蔵のおもちゃ -->
+  <rect x="148" y="395" width="170" height="70" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="195" y="436" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">おもちゃ</text>
+  <rect x="240" y="416" width="50" height="28" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/>
+  <rect x="290" y="424" width="5" height="12" fill="#B45309"/>
+  <text x="232.5" y="488" text-anchor="middle" font-size="12" fill="#4B5563">電池が内蔵されていて外せない</text>
+
+  <text x="60" y="522" font-size="13" fill="#B91C1C">✕ 別の実装に差し替えにくい</text>
+  <text x="60" y="548" font-size="13" fill="#B91C1C">✕ テストでモックを使いにくい</text>
+
+  <!-- ===== 右: DIを行う場合 ===== -->
+  <rect x="465" y="100" width="405" height="470" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="667.5" y="132" text-anchor="middle" font-size="17" font-weight="bold" fill="#047857">DIを行う場合</text>
+
+  <rect x="490" y="150" width="355" height="40" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="667.5" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">外部（Laravelのサービスコンテナなど）</text>
+
+  <line x1="555" y1="190" x2="555" y2="228" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="565" y="214" font-size="12" font-weight="bold" fill="#059669">new</text>
+
+  <rect x="490" y="232" width="130" height="50" rx="6" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="555" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">UserService</text>
+
+  <line x1="622" y1="257" x2="682" y2="257" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="652" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#059669">注入</text>
+
+  <rect x="687" y="205" width="158" height="105" rx="8" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="766" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#111827">UserController</text>
+  <text x="766" y="266" text-anchor="middle" font-size="12" fill="#4B5563">コンストラクタの引数で</text>
+  <text x="766" y="284" text-anchor="middle" font-size="12" fill="#4B5563">受け取るだけ</text>
+  <text x="667.5" y="344" text-anchor="middle" font-size="14" font-weight="bold" fill="#047857">外から渡されるのでゆるやか（疎結合）</text>
+
+  <line x1="485" y1="362" x2="850" y2="362" stroke="#D1D5DB" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="485" y="384" font-size="12" fill="#6B7280">例えるなら…</text>
+
+  <!-- 電池を入れ替えられるおもちゃ -->
+  <rect x="505" y="416" width="50" height="28" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/>
+  <rect x="555" y="424" width="5" height="12" fill="#B45309"/>
+  <text x="532" y="462" text-anchor="middle" font-size="11" fill="#4B5563">電池</text>
+  <line x1="566" y1="430" x2="628" y2="430" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <rect x="635" y="395" width="170" height="70" rx="10" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="682" y="436" text-anchor="middle" font-size="14" font-weight="bold" fill="#374151">おもちゃ</text>
+  <rect x="735" y="412" width="60" height="36" rx="4" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="765" y="434" text-anchor="middle" font-size="11" fill="#6B7280">電池入れ</text>
+  <text x="667.5" y="488" text-anchor="middle" font-size="12" fill="#4B5563">電池を外から入れる・入れ替えられる</text>
+
+  <text x="495" y="522" font-size="13" fill="#047857">◯ 別の実装に差し替えやすい</text>
+  <text x="495" y="548" font-size="13" fill="#047857">◯ テストでモックを渡せる</text>
+</svg>
