@@ -11,7 +11,7 @@ tags: dependency-injection, 依存性注入, DI, デザインパターン
 
 引用: [IT用語辞典](https://e-words.jp/w/%E4%BE%9D%E5%AD%98%E6%80%A7%E6%B3%A8%E5%85%A5.html)
 
-正直全くピンときませんでした。
+とのことですが、実際にコードで見てみると理解しやすくなります。
 
 ## コード例
 
