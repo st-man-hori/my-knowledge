@@ -34,6 +34,21 @@ article {
   p, ul, li, ol {
     color: var(--dark);
   }
+
+  // M PLUS 1p has no 600, so base.scss's semibold links rendered at 700 —
+  // as heavy as headings and strong. Links are already set apart by color;
+  // keep them at 500 and reserve 700 for emphasis and headings.
+  a {
+    font-weight: 500;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) a {
+    font-weight: inherit;
+  }
+}
+
+strong {
+  font-weight: $boldWeight;
 }
 
 // ----- page header -----
