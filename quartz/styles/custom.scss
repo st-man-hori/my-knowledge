@@ -35,9 +35,9 @@ article {
     color: var(--dark);
   }
 
-  // M PLUS 1p has no 600, so base.scss's semibold links rendered at 700 —
-  // as heavy as headings and strong. Links are already set apart by color;
-  // keep them at 500 and reserve 700 for emphasis and headings.
+  // base.scss sets links to semibold, which in Japanese body text reads
+  // nearly as heavy as strong. Links are already set apart by color; keep
+  // them at 500 and reserve 600+ for emphasis and headings.
   a {
     font-weight: 500;
   }
@@ -98,10 +98,11 @@ a.tag-link {
   background: color-mix(in srgb, var(--tertiary) 14%, transparent);
   display: inline-block;
   line-height: 1.35;
-  // M PLUS 1p's ascent/descent is very top-heavy (1160/288), which drops the
-  // glyphs below the visual middle of the pill — the extra bottom padding
-  // recenters them. Tune the third value if the font ever changes.
-  padding: 0.05em 0.75em 0.21em;
+  // Noto Sans JP's ascent/descent is very top-heavy (1160/288), which drops
+  // the glyphs below the visual middle of the pill — the extra bottom padding
+  // recenters them (balanced between kana/kanji and Latin caps). Re-tune the
+  // first and third values if the font ever changes.
+  padding: 0.08em 0.75em 0.18em;
   border-radius: 999px;
   font-size: 0.85em;
 

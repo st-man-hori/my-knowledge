@@ -13,9 +13,9 @@ configuration:
     - templates
     - .obsidian
   theme:
-    # Font loading is owned by the `fonts` plugin below (M PLUS 1p); keeping this
-    # on "googleFonts" made Head.tsx fetch a second, unused Noto Sans JP stylesheet
-    # on every page.
+    # Font loading is owned by the `fonts` plugin below; keeping this on
+    # "googleFonts" made Head.tsx fetch a second, duplicate stylesheet on every
+    # page.
     fontOrigin: local
     cdnCaching: true
     typography:
@@ -113,9 +113,9 @@ plugins:
       fontOrigin: googleFonts
       header: Noto Sans JP
       title: Noto Sans JP
-      # M PLUS 1p ships 100/300/400/500/700/800/900 with no italic; the body
-      # defaults (400/600 + italic) asked Google Fonts for faces that don't
-      # exist, so every 600 silently fell back to 700. 500 is for links.
+      # Google Fonts only serves the weights listed here, and anything missing
+      # falls back to the nearest one. The body default (400/600 + italic) has
+      # no 500 for links, and Japanese text has no italic to load.
       body:
         name: Noto Sans JP
         weights: [400, 500, 600, 700]
