@@ -1,0 +1,26 @@
+{
+  "name": "image-lightbox",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./components": "./components.ts",
+    "./package.json": "./package.json"
+  },
+  "quartz": {
+    "name": "image-lightbox",
+    "displayName": "Image Lightbox",
+    "category": "component",
+    "version": "1.0.0",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "components": {
+      "ImageLightbox": {
+        "displayName": "Image Lightbox",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 90
+      }
+    }
+  }
+}
