@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" width="900" height="640" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="640" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">SPA（シングルページアプリケーション）</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">HTMLは最初の1枚だけ。あとはJavaScriptが必要な部分だけ書き換える</text>
+
+  <!-- 登場人物 -->
+  <rect x="190" y="100" width="160" height="40" rx="8" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="270" y="126" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">ブラウザ</text>
+  <rect x="570" y="100" width="160" height="40" rx="8" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <text x="650" y="126" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">サーバー</text>
+  <line x1="270" y1="140" x2="270" y2="455" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 5"/>
+  <line x1="650" y1="140" x2="650" y2="455" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 5"/>
+
+  <!-- ===== 最初のアクセス ===== -->
+  <line x1="30" y1="160" x2="870" y2="160" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <rect x="30" y="148" width="118" height="24" rx="12" fill="#374151"/>
+  <text x="89" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">最初のアクセス</text>
+  <line x1="274" y1="205" x2="644" y2="205" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="460.0" y="197" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">① /top をリクエスト</text>
+  <rect x="665" y="186" width="190" height="52" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="760" y="207.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">ほぼ空のHTMLと</text>
+  <text x="760" y="225.0" text-anchor="middle" font-size="12" fill="#065F46">大きなJSを返す</text>
+  <line x1="646" y1="260" x2="276" y2="260" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="460.0" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">② ほぼ空のHTML ＋ JavaScript</text>
+  <rect x="382.0" y="248" width="96" height="24" rx="5" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+  <text x="430.0" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">HTML（空）</text>
+  <rect x="488.0" y="248" width="50" height="24" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="513.0" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#5B21B6">JS</text>
+  <rect x="60" y="178" width="140" height="86" rx="6" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M60,184 a6,6 0 0 1 6,-6 h128 a6,6 0 0 1 6,6 v8 h-140 z" fill="#E5E7EB"/>
+  <circle cx="68" cy="185" r="2.2" fill="#F87171"/><circle cx="75" cy="185" r="2.2" fill="#FBBF24"/><circle cx="82" cy="185" r="2.2" fill="#34D399"/>
+  <text x="130.0" y="234" text-anchor="middle" font-size="11" fill="#9CA3AF">（まだ真っ白）</text>
+  <text x="130.0" y="282" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">JSが読み込まれてから</text>
+  <text x="130.0" y="298" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">画面を組み立てる</text>
+
+  <!-- ===== ページ移動 ===== -->
+  <line x1="30" y1="320" x2="870" y2="320" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <rect x="30" y="308" width="90" height="24" rx="12" fill="#374151"/>
+  <text x="75" y="325" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">ページ移動</text>
+  <line x1="274" y1="365" x2="644" y2="365" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="460.0" y="357" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">③ リンクをクリック → データだけ要求</text>
+  <rect x="665" y="346" width="190" height="52" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="760" y="367.0" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">データ（JSON）だけ返す</text>
+  <text x="760" y="385.0" text-anchor="middle" font-size="12" fill="#065F46">（API）</text>
+  <line x1="646" y1="420" x2="276" y2="420" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="460.0" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">④ 必要なデータだけ</text>
+  <rect x="425.0" y="408" width="70" height="24" rx="5" fill="#E0F2FE" stroke="#0369A1" stroke-width="1.5"/>
+  <text x="460.0" y="425" text-anchor="middle" font-size="12" font-weight="bold" fill="#075985">JSON</text>
+  <rect x="60" y="345" width="140" height="86" rx="6" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M60,351 a6,6 0 0 1 6,-6 h128 a6,6 0 0 1 6,6 v8 h-140 z" fill="#E5E7EB"/>
+  <circle cx="68" cy="352" r="2.2" fill="#F87171"/><circle cx="75" cy="352" r="2.2" fill="#FBBF24"/><circle cx="82" cy="352" r="2.2" fill="#34D399"/>
+  <rect x="68" y="365" width="124" height="10" rx="2" fill="#CBD5E1"/>
+  <rect x="68" y="381" width="124" height="42" rx="3" fill="#FDE68A"/>
+  <rect x="76" y="389" width="90" height="4" rx="2" fill="#94A3B8"/>
+  <rect x="76" y="398" width="70" height="4" rx="2" fill="#94A3B8"/>
+  <rect x="76" y="407" width="80" height="4" rx="2" fill="#94A3B8"/>
+  <text x="130.0" y="449" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">変わる部分だけ書き換え</text>
+  <text x="130.0" y="465" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">（再読み込みなし）</text>
+
+  <!-- ===== 特徴 ===== -->
+  <rect x="30" y="480" width="840" height="140" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="512" font-size="13" fill="#047857">◯ 画面の切り替えが速く、アプリのように滑らか</text>
+  <text x="55" y="538" font-size="13" fill="#047857">◯ サーバーはデータ（API）を返すだけでよい</text>
+  <text x="465" y="512" font-size="13" fill="#B91C1C">✕ 最初の表示が遅くなりやすい（JSの読み込み待ち）</text>
+  <text x="465" y="538" font-size="13" fill="#B91C1C">✕ 最初のHTMLが空なのでSEOに弱いことがある</text>
+  <line x1="50" y1="570" x2="850" y2="570" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="55" y="598" font-size="13" fill="#4B5563"><tspan font-weight="bold" fill="#111827">向いている例：</tspan>Gmail・管理画面・ログイン後に使うツール（React、Vue だけで作る構成）</text>
+</svg>
