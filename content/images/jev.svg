@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="620" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">Jevの仕組み</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">文章を生成するのではなく、「判断」だけをJSONで返すAIモデル</text>
+
+  <!-- ===== 入力 ===== -->
+  <text x="30" y="112" font-size="13" font-weight="bold" fill="#374151">入力</text>
+
+  <!-- State -->
+  <rect x="30" y="122" width="270" height="78" rx="8" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="46" y="146" font-size="15" font-weight="bold" fill="#1E3A8A">State（状態）</text>
+  <text x="46" y="168" font-size="12" fill="#1E3A8A">ユーザーやアプリの今の状態</text>
+  <text x="46" y="188" font-size="12" fill="#1E40AF" font-family="Menlo,Consolas,monospace">"ユーザーは鉛筆を探している"</text>
+
+  <!-- Questions -->
+  <rect x="30" y="214" width="270" height="116" rx="8" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="46" y="238" font-size="15" font-weight="bold" fill="#1E3A8A">Questions（質問）</text>
+  <text x="46" y="260" font-size="12" fill="#1E3A8A">何を判断してほしいか</text>
+  <text x="46" y="282" font-size="12" fill="#1E40AF" font-family="Menlo,Consolas,monospace">type: "choice"</text>
+  <text x="46" y="300" font-size="12" fill="#1E40AF">どのコーナーに案内する？</text>
+  <text x="46" y="318" font-size="12" fill="#1E40AF">文房具 / 家電 / 食品 / 服</text>
+
+  <!-- 入力 → Jev -->
+  <line x1="302" y1="161" x2="356" y2="205" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+  <line x1="302" y1="272" x2="356" y2="236" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow-gray)"/>
+
+  <!-- Jev -->
+  <rect x="362" y="170" width="140" height="100" rx="12" fill="#EDE9FE" stroke="#6D28D9" stroke-width="2"/>
+  <text x="432" y="214" text-anchor="middle" font-size="24" font-weight="bold" fill="#4C1D95">Jev</text>
+  <text x="432" y="240" text-anchor="middle" font-size="12" fill="#5B21B6">判断だけを行う</text>
+
+  <!-- Jev → 出力 -->
+  <line x1="504" y1="220" x2="554" y2="220" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <!-- ===== 出力 ===== -->
+  <text x="560" y="112" font-size="13" font-weight="bold" fill="#374151">出力（JSON）</text>
+  <rect x="560" y="122" width="310" height="208" rx="8" fill="#F5F3FF" stroke="#6D28D9" stroke-width="1.5"/>
+  <g font-family="Menlo,Consolas,monospace" font-size="12" fill="#4C1D95">
+    <text x="576" y="148">"decision": {</text>
+    <text x="592" y="168">"type": "choice",</text>
+    <text x="592" y="188" font-weight="bold" fill="#6D28D9">"choice": "文房具",</text>
+    <text x="592" y="208">"probabilities": {</text>
+    <text x="608" y="228">"文房具": 1, "食品": 0,</text>
+    <text x="608" y="248">"家電": 0, "服": 0</text>
+    <text x="592" y="268">}</text>
+    <text x="576" y="288">},</text>
+    <text x="576" y="312">"confidence": { "decision": 1 }</text>
+  </g>
+
+  <!-- 出力 → プログラム -->
+  <line x1="715" y1="332" x2="715" y2="362" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- プログラム -->
+  <rect x="560" y="368" width="310" height="62" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="1.5"/>
+  <text x="576" y="392" font-size="13" font-weight="bold" fill="#065F46">プログラムでそのまま分岐</text>
+  <text x="576" y="414" font-size="12" fill="#065F46" font-family="Menlo,Consolas,monospace">switch (decision.choice) { ... }</text>
+
+  <!-- LLMとの違い -->
+  <rect x="30" y="368" width="472" height="62" rx="8" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="46" y="392" font-size="13" fill="#4B5563"><tspan font-weight="bold">LLM：</tspan>文章で答える → 結果を取り出す処理が必要</text>
+  <text x="46" y="414" font-size="13" fill="#4C1D95"><tspan font-weight="bold">Jev：</tspan>判断だけをJSONで返す → 値を参照するだけ</text>
+
+  <!-- ===== 質問形式 ===== -->
+  <line x1="30" y1="458" x2="870" y2="458" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4 4"/>
+  <rect x="30" y="446" width="168" height="24" rx="12" fill="#374151"/>
+  <text x="114" y="463" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">Questionsの3つの形式</text>
+
+  <!-- Noul -->
+  <rect x="30" y="486" width="270" height="110" rx="8" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="1.5"/>
+  <text x="46" y="512" font-size="16" font-weight="bold" fill="#1E3A8A" font-family="Menlo,Consolas,monospace">Noul</text>
+  <text x="46" y="536" font-size="13" fill="#374151">はい・いいえの判断</text>
+  <text x="46" y="566" font-size="12" fill="#6B7280">例：入力に個人情報が</text>
+  <text x="46" y="584" font-size="12" fill="#6B7280">　　含まれているか？</text>
+
+  <!-- Choice -->
+  <rect x="315" y="486" width="270" height="110" rx="8" fill="#FFFFFF" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="331" y="512" font-size="16" font-weight="bold" fill="#4C1D95" font-family="Menlo,Consolas,monospace">Choice</text>
+  <text x="331" y="536" font-size="13" fill="#374151">選択肢から選ぶ判断</text>
+  <text x="331" y="566" font-size="12" fill="#6B7280">例：問い合わせを</text>
+  <text x="331" y="584" font-size="12" fill="#6B7280">　　どの担当者に振り分ける？</text>
+
+  <!-- Score -->
+  <rect x="600" y="486" width="270" height="110" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <text x="616" y="512" font-size="16" font-weight="bold" fill="#065F46" font-family="Menlo,Consolas,monospace">Score</text>
+  <text x="616" y="536" font-size="13" fill="#374151">どのくらい・どの程度の判断</text>
+  <text x="616" y="566" font-size="12" fill="#6B7280">例：求人とのマッチ度は</text>
+  <text x="616" y="584" font-size="12" fill="#6B7280">　　どのくらい？</text>
+</svg>
