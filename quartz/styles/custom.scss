@@ -8,6 +8,14 @@
 // :root[saved-theme] scoping. Tints are derived with color-mix.
 // ============================================================
 
+// iOS Safari ignores base.scss's unprefixed text-size-adjust, so it re-inflates
+// text whenever content overflows horizontally — e.g. while the mobile explorer
+// drawer slides in from -100vw — making font sizes jump as the menu opens.
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 // ----- typography -----
 article {
   font-size: 1.005rem;
