@@ -32,6 +32,14 @@ article {
     // Japanese body text reads as "left-shifted" with a ragged right edge;
     // justified setting (standard for Japanese print) keeps both edges flush.
     text-align: justify;
+
+    // On narrow screens a line holds only ~20 characters, so the slack that
+    // justify spreads out (worst when an unbreakable English word or code
+    // span wraps to the next line) visibly widens or tightens the letter
+    // spacing from line to line. Fall back to start alignment there.
+    @media all and ($mobile) {
+      text-align: start;
+    }
   }
 
   h2 {
