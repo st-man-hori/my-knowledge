@@ -398,6 +398,18 @@ details.note-properties {
     padding: 0 1.5rem;
   }
 
+  // The sticky header row (left sidebar holding the explorer) sits inside that
+  // gutter, so it stops 1.5rem short of each screen edge. iOS Safari 26 only
+  // extends a top-pinned element's background up into the status bar when the
+  // element spans the full viewport width — otherwise the status bar area and
+  // the side gutters show the article scrolling underneath. Bleed the header
+  // out to the edges and pad the contents back in so they stay aligned.
+  // `html` prefix: outrank the explorer plugin's `margin: 0`, which loads later.
+  html .page > #quartz-body .sidebar.left:has(.explorer) {
+    margin: 0 -1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
   // 1.75rem site title dwarfs the icon toolbar it sits next to on mobile.
   // The hamburger (.explorer, order: -1) sits flush against it because the
   // mobile header row has gap: 0 — push the title off it a bit.
