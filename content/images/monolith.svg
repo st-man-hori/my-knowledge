@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="720" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">モノリス</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">すべての機能が1つのアプリケーション（1つのコードベース）にまとまっている</text>
+
+  <!-- クライアント -->
+  <rect x="290" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="360" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">ブラウザ</text>
+  <rect x="470" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="540" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">スマホアプリ</text>
+  <line x1="360" y1="145" x2="360" y2="181" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="540" y1="145" x2="540" y2="181" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- アプリケーション本体 -->
+  <rect x="150" y="185" width="600" height="230" rx="14" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2.5"/>
+  <text x="450" y="215" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A8A">アプリケーション（1つの塊）</text>
+
+  <!-- 機能モジュール -->
+  <rect x="175" y="232" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="260" y="266" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">ユーザー管理</text>
+  <rect x="365" y="232" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="450" y="266" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">商品管理</text>
+  <rect x="555" y="232" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="640" y="266" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">注文</text>
+  <rect x="175" y="308" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="260" y="342" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">決済</text>
+  <rect x="365" y="308" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="450" y="342" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">在庫</text>
+  <rect x="555" y="308" width="170" height="56" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="640" y="342" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">通知</text>
+
+  <text x="450" y="396" text-anchor="middle" font-size="12" fill="#4B5563">機能どうしは関数呼び出しで直接やりとりする</text>
+
+  <!-- 左右の注釈 -->
+  <rect x="20" y="262" width="116" height="24" rx="12" fill="#374151"/>
+  <text x="78" y="279" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">1つのプロセス</text>
+  <text x="78" y="306" text-anchor="middle" font-size="12" fill="#374151">まとめて起動し</text>
+  <text x="78" y="324" text-anchor="middle" font-size="12" fill="#374151">まとめて動く</text>
+
+  <rect x="764" y="262" width="116" height="24" rx="12" fill="#374151"/>
+  <text x="822" y="279" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">デプロイは1回</text>
+  <text x="822" y="306" text-anchor="middle" font-size="12" fill="#374151">1か所の修正でも</text>
+  <text x="822" y="324" text-anchor="middle" font-size="12" fill="#374151">全体をデプロイ</text>
+
+  <!-- データベース -->
+  <line x1="450" y1="415" x2="450" y2="451" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M350,467 v48 a100,13 0 0 0 200,0 v-48" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="450" cy="467" rx="100" ry="13" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="450" y="503" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">データベース（1つ）</text>
+  <text x="450" y="545" text-anchor="middle" font-size="12" fill="#4B5563">全機能が同じDBを共有するので、トランザクションもまとめて扱える</text>
+
+  <!-- 特徴 -->
+  <rect x="30" y="570" width="840" height="130" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="603" font-size="13" fill="#047857">◯ 開発・デプロイがシンプル</text>
+  <text x="55" y="633" font-size="13" fill="#047857">◯ テスト・デバッグがしやすい</text>
+  <text x="55" y="663" font-size="13" fill="#047857">◯ トランザクション管理が容易</text>
+  <text x="460" y="603" font-size="13" fill="#B45309">△ 一部だけをスケールできない（全体を複製する）</text>
+  <text x="460" y="633" font-size="13" fill="#B45309">△ 大きくなると変更の影響範囲が読みにくい</text>
+  <text x="460" y="663" font-size="13" fill="#B45309">△ 小さな修正でも全体のデプロイが必要</text>
+</svg>

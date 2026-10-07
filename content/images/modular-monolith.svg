@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" width="900" height="760" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="760" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">モジュラーモノリス</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">1つのアプリケーションのまま、中身を機能ごとのモジュールにきっちり区切る</text>
+
+  <!-- クライアント -->
+  <rect x="290" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="360" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">ブラウザ</text>
+  <rect x="470" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="540" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">スマホアプリ</text>
+  <line x1="360" y1="145" x2="360" y2="181" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="540" y1="145" x2="540" y2="181" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- アプリケーション本体 -->
+  <rect x="140" y="185" width="620" height="285" rx="14" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2.5"/>
+  <text x="450" y="215" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A8A">アプリケーション（1つの塊のまま）</text>
+
+  <!-- モジュール -->
+  <rect x="155" y="235" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="240" y="263" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">在庫</text>
+  <text x="240" y="281" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="165" y="291" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="240" y="306" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+  <rect x="365" y="235" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="450" y="263" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">注文</text>
+  <text x="450" y="281" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="375" y="291" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="450" y="306" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+  <rect x="575" y="235" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="660" y="263" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">決済</text>
+  <text x="660" y="281" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="585" y="291" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="660" y="306" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+  <rect x="155" y="345" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="240" y="373" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">ユーザー管理</text>
+  <text x="240" y="391" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="165" y="401" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="240" y="416" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+  <rect x="365" y="345" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="450" y="373" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">商品管理</text>
+  <text x="450" y="391" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="375" y="401" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="450" y="416" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+  <rect x="575" y="345" width="170" height="86" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="660" y="373" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A8A">通知</text>
+  <text x="660" y="391" text-anchor="middle" font-size="11" fill="#4B5563">内部の処理・テーブル</text>
+  <rect x="585" y="401" width="150" height="22" rx="5" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.2"/>
+  <text x="660" y="416" text-anchor="middle" font-size="11" font-weight="bold" fill="#5B21B6">公開API（窓口）</text>
+
+  <!-- OK: 公開API経由の呼び出し -->
+  <line x1="365" y1="302" x2="317" y2="302" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <line x1="535" y1="302" x2="583" y2="302" stroke="#6D28D9" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <!-- NG: 他モジュールの内部を直接触る -->
+  <line x1="365" y1="385" x2="317" y2="385" stroke="#DC2626" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-red)"/>
+  <circle cx="342" cy="385" r="8" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.5"/>
+  <path d="M338,381 L346,389 M346,381 L338,389" stroke="#DC2626" stroke-width="2"/>
+
+  <text x="450" y="450" text-anchor="middle" font-size="12" fill="#4B5563"><tspan fill="#5B21B6" font-weight="bold">→ 公開API経由ならOK</tspan>　<tspan fill="#DC2626" font-weight="bold">✕ 他モジュールの内部を直接触るのはNG</tspan></text>
+
+  <!-- 左右の注釈 -->
+  <rect x="20" y="300" width="108" height="24" rx="12" fill="#374151"/>
+  <text x="74" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">デプロイは1回</text>
+  <text x="74" y="344" text-anchor="middle" font-size="12" fill="#374151">動かし方は</text>
+  <text x="74" y="362" text-anchor="middle" font-size="12" fill="#374151">モノリスと同じ</text>
+
+  <rect x="772" y="300" width="108" height="24" rx="12" fill="#374151"/>
+  <text x="826" y="317" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">境界がはっきり</text>
+  <text x="826" y="344" text-anchor="middle" font-size="12" fill="#374151">あとから1つずつ</text>
+  <text x="826" y="362" text-anchor="middle" font-size="12" fill="#374151">サービスに切り出せる</text>
+
+  <!-- データベース -->
+  <line x1="450" y1="470" x2="450" y2="506" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M350,522 v48 a100,13 0 0 0 200,0 v-48" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="450" cy="522" rx="100" ry="13" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="450" y="558" text-anchor="middle" font-size="15" font-weight="bold" fill="#065F46">データベース（1つ）</text>
+  <text x="450" y="602" text-anchor="middle" font-size="12" fill="#4B5563">DBは1つでも、テーブルはモジュールごとに持ち主を分ける</text>
+
+  <!-- 特徴 -->
+  <rect x="30" y="620" width="840" height="120" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="652" font-size="13" fill="#047857">◯ デプロイ・運用はモノリスと同じくシンプル</text>
+  <text x="55" y="682" font-size="13" fill="#047857">◯ 変更の影響がモジュール内に収まりやすい</text>
+  <text x="55" y="712" font-size="13" fill="#047857">◯ 必要になればサービスとして切り出しやすい</text>
+  <text x="460" y="652" font-size="13" fill="#B45309">△ 境界を守るルールやチェックの仕組みが必要</text>
+  <text x="460" y="682" font-size="13" fill="#B45309">△ スケールはモノリスと同じく全体単位</text>
+  <text x="460" y="712" font-size="13" fill="#B45309">△ 境界の切り方を誤ると効果が薄い</text>
+</svg>

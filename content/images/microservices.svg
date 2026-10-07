@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" width="900" height="660" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="660" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="48" text-anchor="middle" font-size="26" font-weight="bold" fill="#111827">マイクロサービス</text>
+  <text x="450" y="78" text-anchor="middle" font-size="15" fill="#4B5563">機能ごとに小さなサービスへ分割し、それぞれを独立して開発・デプロイする</text>
+
+  <!-- クライアント -->
+  <rect x="290" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="360" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">ブラウザ</text>
+  <rect x="470" y="105" width="140" height="40" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="1.5"/>
+  <text x="540" y="131" text-anchor="middle" font-size="15" font-weight="bold" fill="#374151">スマホアプリ</text>
+  <line x1="360" y1="145" x2="360" y2="176" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="540" y1="145" x2="540" y2="176" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue)"/>
+
+  <!-- APIゲートウェイ -->
+  <rect x="220" y="180" width="460" height="42" rx="8" fill="#EDE9FE" stroke="#6D28D9" stroke-width="1.5"/>
+  <text x="450" y="206" text-anchor="middle" font-size="15" font-weight="bold" fill="#5B21B6">APIゲートウェイ（リクエストを各サービスへ振り分け）</text>
+
+  <!-- ゲートウェイ → 各サービス -->
+  <line x1="290" y1="222" x2="100" y2="266" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="354" y1="222" x2="240" y2="266" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="418" y1="222" x2="380" y2="258" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="482" y1="222" x2="520" y2="266" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="546" y1="222" x2="660" y2="266" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="610" y1="222" x2="800" y2="266" stroke="#2563EB" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- 注文サービスは複数台にスケール -->
+  <rect x="324" y="262" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <rect x="320" y="266" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <rect x="414" y="250" width="44" height="20" rx="10" fill="#B45309"/>
+  <text x="436" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">×3台</text>
+
+  <!-- 各サービス（専用DB付き） -->
+  <rect x="36" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="100" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">ユーザーサービス</text>
+  <path d="M65,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="100" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="100" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="100" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+  <rect x="176" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="240" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">商品サービス</text>
+  <path d="M205,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="240" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="240" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="240" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+  <rect x="316" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="380" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">注文サービス</text>
+  <path d="M345,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="380" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="380" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="380" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+  <rect x="456" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="520" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">在庫サービス</text>
+  <path d="M485,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="520" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="520" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="520" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+  <rect x="596" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="660" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">決済サービス</text>
+  <path d="M625,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="660" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="660" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="660" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+  <rect x="736" y="270" width="128" height="120" rx="10" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <text x="800" y="297" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A8A">通知サービス</text>
+  <path d="M765,322 v30 a35,7 0 0 0 70,0 v-30" fill="#D1FAE5" stroke="#047857" stroke-width="1.5"/>
+  <ellipse cx="800" cy="322" rx="35" ry="7" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+  <text x="800" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#065F46">DB</text>
+  <text x="800" y="378" text-anchor="middle" font-size="11" fill="#4B5563">専用のDBを持つ</text>
+
+  <!-- サービス間通信 -->
+  <path d="M380,392 Q450,436 516,394" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow-purple)"/>
+  <path d="M380,392 Q520,470 656,394" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow-purple)"/>
+  <path d="M660,392 Q730,436 796,394" fill="none" stroke="#6D28D9" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow-purple)"/>
+  <text x="450" y="466" text-anchor="middle" font-size="12" fill="#5B21B6">サービス間はネットワーク越しに通信する（HTTP / gRPC / メッセージキュー）</text>
+
+  <!-- 特徴 -->
+  <rect x="30" y="505" width="840" height="130" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="538" font-size="13" fill="#047857">◯ サービスごとに独立してデプロイできる</text>
+  <text x="55" y="568" font-size="13" fill="#047857">◯ 負荷の高いサービスだけスケールできる</text>
+  <text x="55" y="598" font-size="13" fill="#047857">◯ チーム・サービスごとに技術を選べる</text>
+  <text x="440" y="538" font-size="13" fill="#B45309">△ ネットワーク通信が増え、障害点も増える</text>
+  <text x="440" y="568" font-size="13" fill="#B45309">△ サービスをまたぐトランザクション・整合性が難しい</text>
+  <text x="440" y="598" font-size="13" fill="#B45309">△ 監視・運用の仕組みが必要で運用コストが高い</text>
+</svg>
