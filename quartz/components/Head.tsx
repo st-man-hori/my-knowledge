@@ -50,7 +50,10 @@ export default (() => {
     const isFolderPage = !isHomePage && rawSlug.endsWith("/index")
     const isArticle = !isHomePage && !isTagPage && !isFolderPage && !is404
     const isUnlisted = fileData.unlisted === true
-    const isNoIndex = isUnlisted || is404
+    // Tag pages are thin auto-generated link lists, so keep them out of the index
+    // but still let crawlers follow them through to the articles.
+    const isNoIndex = isUnlisted || is404 || isTagPage
+    const robotsContent = isTagPage ? "noindex, follow" : "noindex, nofollow"
 
     const ogLocale = (cfg.locale ?? "en-US").replace("-", "_")
     const tags = fileData.frontmatter?.tags ?? []
@@ -141,7 +144,7 @@ export default (() => {
         <link rel="icon" href={favicon16Path} sizes="16x16" type="image/png" />
         <link rel="apple-touch-icon" href={appleTouchIconPath} sizes="180x180" />
         <link rel="canonical" href={socialUrl} />
-        {isNoIndex && <meta name="robots" content="noindex, nofollow" />}
+        {isNoIndex && <meta name="robots" content={robotsContent} />}
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 

@@ -159,7 +159,8 @@ plugins:
   - source: "@quartz-community/content-index"
     enabled: true
     options:
-      enableSiteMap: true
+      # sitemap.xml is emitted by ./plugins/sitemap so it can list articles only
+      enableSiteMap: false
       enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: false
@@ -168,6 +169,8 @@ plugins:
   - source: "@quartz-community/cname"
     enabled: true
   - source: "./plugins/robots-txt"
+    enabled: true
+  - source: "./plugins/sitemap"
     enabled: true
   - source: "./plugins/github-link"
     enabled: true

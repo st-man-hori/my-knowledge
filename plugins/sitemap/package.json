@@ -1,0 +1,14 @@
+{
+  "name": "sitemap",
+  "private": true,
+  "type": "module",
+  "main": "./index.ts",
+  "quartz": {
+    "name": "sitemap",
+    "displayName": "Sitemap",
+    "category": "emitter",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {}
+  }
+}
