@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 920" width="900" height="920" font-family="'Hiragino Sans','Noto Sans JP','Yu Gothic',Meiryo,sans-serif">
+  <defs>
+    <marker id="arrow-blue3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrow-red3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrow-amber3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97706"/>
+    </marker>
+    <marker id="arrow-gray3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="920" fill="#FFFFFF"/>
+
+  <!-- タイトル -->
+  <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#111827">CVE-2026-109619: ワーカーに残る「前の客の忘れ物」</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#4B5563">リクエスト終了時のリセットが飛ばされると、次のリクエストが解放済みメモリを読みにいく</text>
+
+  <!-- ワーカー外枠 -->
+  <rect x="30" y="86" width="840" height="610" rx="14" fill="#F9FAFB" stroke="#9CA3AF" stroke-width="2"/>
+  <text x="55" y="112" font-size="13" font-weight="bold" fill="#374151">ワーカープロセス(複数のリクエストを使い回す)</text>
+
+  <!-- グローバル変数ピル -->
+  <rect x="300" y="126" width="300" height="34" rx="17" fill="#374151"/>
+  <text x="450" y="148" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">グローバル変数(ワーカー内で1つだけ共有)</text>
+
+  <!-- Request A 列 -->
+  <rect x="60" y="178" width="360" height="330" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="240" y="204" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A8A">Request A</text>
+
+  <rect x="80" y="216" width="320" height="54" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="240" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A8A">セッション/エラー状態を</text>
+  <text x="240" y="256" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A8A">グローバル変数へ書き込む</text>
+
+  <line x1="240" y1="270" x2="240" y2="288" stroke="#2563EB" stroke-width="2" marker-end="url(#arrow-blue3)"/>
+
+  <rect x="80" y="290" width="320" height="54" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="240" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">致命的エラー発生</text>
+  <text x="240" y="330" text-anchor="middle" font-size="11" fill="#991B1B">(実行時間超過・未捕捉例外・OOM等)</text>
+
+  <line x1="240" y1="344" x2="240" y2="362" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-red3)"/>
+
+  <rect x="80" y="364" width="320" height="46" rx="8" fill="#FECACA" stroke="#991B1B" stroke-width="1.5"/>
+  <text x="240" y="392" text-anchor="middle" font-size="13" font-weight="bold" fill="#7F1D1D">リセット処理がスキップされる</text>
+
+  <line x1="240" y1="410" x2="240" y2="428" stroke="#991B1B" stroke-width="2" marker-end="url(#arrow-red3)"/>
+
+  <rect x="80" y="430" width="320" height="54" rx="8" fill="#E5E7EB" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="240" y="452" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">リクエスト終了</text>
+  <text x="240" y="470" text-anchor="middle" font-size="12" fill="#374151">→ Aのメモリ領域は解放される</text>
+
+  <!-- グローバル変数からAへの書き込み矢印 -->
+  <line x1="300" y1="243" x2="420" y2="160" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-blue3)"/>
+
+  <!-- グローバル変数からダングリングのまま下へ -->
+  <line x1="470" y1="160" x2="470" y2="200" stroke="#DC2626" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="470" y1="200" x2="420" y2="440" stroke="#DC2626" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow-red3)"/>
+  <text x="470" y="192" text-anchor="middle" font-size="11" fill="#991B1B">指した先はそのまま</text>
+
+  <!-- Request B 列 -->
+  <rect x="480" y="178" width="360" height="330" rx="12" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="660" y="204" text-anchor="middle" font-size="14" font-weight="bold" fill="#92400E">Request B (同じワーカーが次に処理)</text>
+
+  <rect x="500" y="216" width="320" height="54" rx="8" fill="#FDE68A" stroke="#D97706" stroke-width="1.5"/>
+  <text x="660" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">初期化の前に古い</text>
+  <text x="660" y="256" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">グローバル変数を読むコードパス</text>
+
+  <line x1="660" y1="270" x2="660" y2="288" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-amber3)"/>
+
+  <rect x="500" y="290" width="320" height="54" rx="8" fill="#FECACA" stroke="#991B1B" stroke-width="1.5"/>
+  <text x="660" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#7F1D1D">解放済み領域(=Aの跡地)</text>
+  <text x="660" y="330" text-anchor="middle" font-size="12" font-weight="bold" fill="#7F1D1D">を参照 → Use After Free</text>
+
+  <line x1="660" y1="344" x2="660" y2="362" stroke="#991B1B" stroke-width="2" marker-end="url(#arrow-red3)"/>
+
+  <rect x="500" y="364" width="320" height="54" rx="8" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/>
+  <text x="660" y="386" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">攻撃者が事前にその領域を</text>
+  <text x="660" y="404" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">自分のデータで上書き(ヒープグルーミング)</text>
+
+  <line x1="660" y1="418" x2="660" y2="436" stroke="#B45309" stroke-width="2" marker-end="url(#arrow-amber3)"/>
+
+  <rect x="510" y="438" width="300" height="38" rx="19" fill="#991B1B"/>
+  <text x="660" y="463" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">制御フロー乗っ取り → RCE</text>
+
+  <!-- A -> B 時間経過 -->
+  <line x1="420" y1="457" x2="500" y2="457" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow-gray3)"/>
+  <text x="460" y="520" text-anchor="middle" font-size="11" fill="#6B7280">次のリクエストが</text>
+  <text x="460" y="536" text-anchor="middle" font-size="11" fill="#6B7280">同じワーカーに割り当て</text>
+
+  <!-- 発見された経路 -->
+  <rect x="60" y="518" width="360" height="56" rx="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="240" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">① fatal_error_backtraces (PHP8.5)</text>
+  <text x="240" y="560" text-anchor="middle" font-size="11" fill="#6B7280">致命的エラーのバックトレース保存状態</text>
+
+  <rect x="480" y="518" width="360" height="56" rx="8" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="660" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#374151">② session.upload_progress</text>
+  <text x="660" y="560" text-anchor="middle" font-size="11" fill="#6B7280">デフォルト有効・session_start()不要</text>
+
+  <text x="450" y="604" text-anchor="middle" font-size="12" fill="#4B5563">どちらも「致命的エラーがリセットを邪魔する」→「次のリクエストが古い状態を早期に消費する」という同じ構造</text>
+
+  <!-- 実証状況 -->
+  <rect x="30" y="712" width="840" height="100" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="738" font-size="13" font-weight="bold" fill="#374151">実証された経路</text>
+  <text x="55" y="762" font-size="12" fill="#991B1B">・mod_php: ①②どちらの経路でも完全なRCEを実証</text>
+  <text x="55" y="784" font-size="12" fill="#991B1B">・PHP-FPM: アプリ実行中に致命的エラー→次のリクエストで session.upload_progress が消費する経路でRCEを実証</text>
+  <text x="55" y="802" font-size="11" fill="#6B7280">(FPMは起動失敗時に子プロセスを終了するため、起動直後の単純な再現はできない)</text>
+
+  <!-- 対応 -->
+  <rect x="30" y="824" width="840" height="84" rx="12" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="55" y="850" font-size="13" fill="#047857">◯ 修正(8.2.35 / 8.3.36 / 8.4.27 / 8.5.12〜): リクエストスコープのグローバル状態を確実にリセットするパッチを適用</text>
+  <text x="55" y="874" font-size="13" fill="#B45309">△ 緩和: fatal_error_backtraces=0 / session.upload_progress.enabled=0、pm.max_requests=1でワーカー寿命を短縮</text>
+  <text x="55" y="896" font-size="12" fill="#6B7280">※ error_reporting の変更、@演算子、display_errors/log_errorsの無効化では防げない</text>
+</svg>
