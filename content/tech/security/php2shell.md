@@ -1,5 +1,5 @@
 ---
-title: PHPの2つのCritical脆弱性(CVE-2026-109618 / CVE-2026-109619)を仕組みから理解する
+title: php2shellについて
 description: PHP 8.4.27未満に存在する2つのCritical(CVSS 9.2)脆弱性、OOM時のUse-After-FreeとワーカーのダングリングポインタがどのようにRCEまで到達するのかを、ヒープグルーミングの仕組みも含めて解説します。
 created: 2026-10-22
 tags: security, php, use-after-free, rce, cve
